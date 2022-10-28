@@ -1,0 +1,30 @@
+.main-nav {
+  display: flex;
+  width: percentage((1160 - (215 + 160)) / 1160);
+
+  @include vp-1023 {
+    width: auto;
+    align-self: center;
+  }
+}
+
+.main-nav__button {
+  margin-left: percentage(145 / 785);
+  border: 1px solid #f2f5f7;
+  background-color: inherit;
+  color: #f2f5f7;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  min-width: max-content;
+
+  @include vp-1023 {
+    display: none;
+  }
+}

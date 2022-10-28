@@ -19,8 +19,27 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
-      <div class="container"></div>
+    <header class="header main-header">
+      <div class="main-header__wrapper">
+        <div class="main-header__container">
+          <a class="main-header__logo">
+            <img src="img/sprite/logo.svg" width="215" height="55" alt="Логотип компании.">
+          </a>
+          <!-- contacts-list__link contacts-list__link--mail, contacts-list__link contacts-list__link--phone -->
+          <nav class="main-header__nav main-nav">
+            <ul class="main-nav__contact-list contact-list">
+              <li class="contact-list__item contact-list__item--mail">
+                <a href="mailto:info@sd.ru"><span>info@sd.ru</span></a>
+              </li>
+              <li class="contact-list__item contact-list__item--phone">
+                <a href="tel:+74950005252"><span>+7 (495) 000 52 52</span></a>
+              </li>
+            </ul>
+            <button class="main-nav__button" type="button">Заказать звонок</button>
+          </nav>
+        </div>
+      </div>
+
     </header>
     <main>
       <!-- <section class="intro">
@@ -33,8 +52,8 @@
           </div>
         </section> -->
     </main>
-    <footer class="footer">
-      <div class="container"></div>
+    <footer class="footer main-footer">
+
     </footer>
   </div>
 
@@ -46,7 +65,7 @@
   </a>
 
   <!-- Тесты -->
-  <img src="img/favicons/32x32.png" width="16" height="16" alt="">
+
 
   <!-- Модалки -->
   <!-- <div class="modal modal--preload" data-modal="feedback">
