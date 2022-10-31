@@ -16,7 +16,7 @@
 
 .contact-list__item {
   width: percentage(225 / 480);
-  min-width: max-content;
+  // min-width: max-content;
 
   @include vp-1023 {
     width: auto;
@@ -29,8 +29,14 @@
 
 .contact-list__item--mail a,
 .contact-list__item--phone a {
-  padding-left: 35px;
+  padding-left: percentage(35 / 225);
   position: relative;
+  font-size: 16px;
+  padding-bottom: 100%;
+
+  @media (max-width: $vp-1920) {
+    font-size: 0.83vw;
+  }
 
   @include vp-1023 {
     display: block;
@@ -43,18 +49,39 @@
 .contact-list__item--phone a::after {
   position: absolute;
   content: "";
-  width: 20px;
-  height: 20px;
   top: -1px;
   left: 0;
+  background-size: cover;
+  background-position: center;
+
+  @include vp-1023 {
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .contact-list__item--mail a::after {
   background-image: url("../img/svg/icon-mail.svg");
+  width: percentage(21 / (95.59 + 35));
+  height: percentage(20 / (225 + 18));
+
+  @include vp-1023 {
+    width: 21px;
+    height: 20px;
+  }
 }
 
 .contact-list__item--phone a::after {
   background-image: url("../img/svg/icon-phone.svg");
+  width: percentage(21 / (172 + 35));
+  height: percentage(20 / (225 + 18));
+
+  @include vp-1023 {
+    width: 21px;
+    height: 20px;
+  }
 }
 
 .contact-list__item--mail span,

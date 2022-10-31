@@ -787,11 +787,13 @@ button,
 
 .main-header__wrapper {
   background-color: #041827;
-  padding-right: 60px;
+  padding-left: 18.2291666667%;
+  padding-right: 21.3541666667%;
 }
 
 .main-header__container {
   max-width: 1160px;
+  min-width: 259px;
   padding-top: 30px;
   padding-bottom: 16px;
   margin: 0 auto;
@@ -803,6 +805,12 @@ button,
   column-gap: 13.7931034483%;
 }
 
+.main-header__logo {
+  width: 18.5344827586%;
+  max-width: 215px;
+  min-width: 35px;
+}
+
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -812,21 +820,22 @@ button,
 
 .main-nav__button {
   margin-left: 18.4713375796%;
+  width: 20.3821656051%;
   border: 1px solid #f2f5f7;
   background-color: inherit;
   color: #f2f5f7;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  padding: 10px 15px;
+  padding: 1.2738853503% 1.9108280255%;
   border-radius: 3px;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .contact-list {
@@ -847,9 +856,6 @@ button,
 
 .contact-list__item {
   width: 46.875%;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
 }
 
 .contact-list__item a {
@@ -858,26 +864,32 @@ button,
 
 .contact-list__item--mail a,
 .contact-list__item--phone a {
-  padding-left: 35px;
+  padding-left: 15.5555555556%;
   position: relative;
+  font-size: 16px;
+  padding-bottom: 100%;
 }
 
 .contact-list__item--mail a::after,
 .contact-list__item--phone a::after {
   position: absolute;
   content: "";
-  width: 20px;
-  height: 20px;
   top: -1px;
   left: 0;
+  background-size: cover;
+  background-position: center;
 }
 
 .contact-list__item--mail a::after {
   background-image: url("../img/svg/icon-mail.svg");
+  width: 16.0808637721%;
+  height: 8.2304526749%;
 }
 
 .contact-list__item--phone a::after {
   background-image: url("../img/svg/icon-phone.svg");
+  width: 10.1449275362%;
+  height: 8.2304526749%;
 }
 
 /* @mixin hover-focus {
@@ -921,15 +933,27 @@ button,
   }
 */
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
+@media (min-width: 768px) {
+  .main-header__logo img {
+    width: 215px;
+    height: 55px;
   }
 }
 
-@media (max-width: 1279px) {
-  .main-header__wrapper {
-    padding: 0 30px;
+@media (max-width: 1920px) {
+  .main-nav__button {
+    font-size: 0.7291666667vw;
+  }
+
+  .contact-list__item--mail a,
+  .contact-list__item--phone a {
+    font-size: 0.83vw;
+  }
+}
+
+@media (max-width: 1439px) {
+  .container {
+    padding: 0 32px;
   }
 }
 
@@ -944,7 +968,6 @@ button,
   }
 
   .main-header__container {
-    min-width: 650px;
     padding-top: 20px;
     padding-bottom: 6px;
     -webkit-column-gap: 0;
@@ -955,11 +978,14 @@ button,
     justify-content: space-between;
   }
 
+  .main-header__logo {
+    width: 215px;
+  }
+
   .main-nav {
     width: auto;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
   }
 
   .main-nav__button {
@@ -987,6 +1013,26 @@ button,
     min-height: 40px;
   }
 
+  .contact-list__item--mail a::after,
+  .contact-list__item--phone a::after {
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .contact-list__item--mail a::after {
+    width: 21px;
+    height: 20px;
+  }
+
+  .contact-list__item--phone a::after {
+    width: 21px;
+    height: 20px;
+  }
+
   .contact-list__item--mail span,
   .contact-list__item--phone span {
     display: none;
@@ -1009,6 +1055,22 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .main-header__wrapper {
+    padding-left: 8.125%;
+    padding-right: 10.9375%;
+    min-width: 320px;
+  }
+
+  .main-header__container {
+    padding-top: 15px;
+  }
+
+  .main-header__logo {
+    width: 35px;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
   }
 }
 

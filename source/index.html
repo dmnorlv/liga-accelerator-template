@@ -23,7 +23,10 @@
       <div class="main-header__wrapper">
         <div class="main-header__container">
           <a class="main-header__logo">
-            <img src="img/sprite/logo.svg" width="215" height="55" alt="Логотип компании.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/svg/logo.svg">
+              <img src="img/svg/logo-mobile.svg" width="35" height="35" alt="Логотип компании.">
+            </picture>
           </a>
           <!-- contacts-list__link contacts-list__link--mail, contacts-list__link contacts-list__link--phone -->
           <nav class="main-header__nav main-nav">

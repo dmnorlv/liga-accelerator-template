@@ -1,28 +1,33 @@
 .main-nav {
   display: flex;
-  width: percentage((1160 - (215 + 160)) / 1160);
+  width: percentage(785 / 1160);
 
   @include vp-1023 {
     width: auto;
-    align-self: center;
+    align-self: flex-start;
   }
 }
 
 .main-nav__button {
   margin-left: percentage(145 / 785);
+  width: percentage(160 / 785);
   border: 1px solid #f2f5f7;
   background-color: inherit;
   color: #f2f5f7;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-family: "Roboto Condensed";
+  font-family: $ff-roboto-condensed;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  padding: 10px 15px;
+  padding: percentage(10 / 785) percentage(15 / 785);
   border-radius: 3px;
-  min-width: max-content;
+  align-self: center;
+  // min-width: max-content;
+  @media (max-width: $vp-1920) {
+    font-size: (14 / 1920) * 100vw;
+  }
 
   @include vp-1023 {
     display: none;
