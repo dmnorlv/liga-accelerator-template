@@ -1,0 +1,19 @@
+.social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  column-gap: percentage(15 / 150);
+  margin-top: percentage(30 / 215);
+  margin-left: percentage(10 / 215);
+  width: percentage(150 / 215);
+}
+
+.social-list__link {
+  padding: percentage(5 / 40);
+  display: flex;
+}
+
+.social-list__item {
+  width: percentage(40 / 150);
+}

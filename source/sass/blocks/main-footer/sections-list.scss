@@ -1,0 +1,18 @@
+.sections-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: percentage(220 / 470) percentage(220 / 470);
+  grid-auto-flow: row dense;
+  column-gap: percentage(30 / 470);
+  // row-gap: percentage(10 / 130);
+}
+
+.section-list__item:not(:last-child) {
+  padding-bottom: percentage(10 / 220);
+}
+
+.section-list__item {
+  line-height: 20px;
+}

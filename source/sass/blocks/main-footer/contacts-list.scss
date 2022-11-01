@@ -1,0 +1,21 @@
+.contacts-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-list__item address {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: normal;
+  line-height: 20px;
+}
+
+.contacts-list__item {
+  line-height: 20px;
+}
+
+.contacts-list__item:not(:last-child) {
+  padding-bottom: percentage(10 / 345);
+}

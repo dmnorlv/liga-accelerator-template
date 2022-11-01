@@ -3,8 +3,9 @@
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   width: percentage(480 / 785);
-  column-gap: percentage(27.5 / 480);
+  justify-content: space-between;
   align-items: center;
 
   @include vp-1023 {
@@ -32,7 +33,7 @@
   padding-left: percentage(35 / 225);
   position: relative;
   font-size: 16px;
-  padding-bottom: 100%;
+  // padding-bottom: 100%;
 
   @media (max-width: $vp-1920) {
     font-size: 0.83vw;
@@ -65,7 +66,8 @@
 .contact-list__item--mail a::after {
   background-image: url("../img/svg/icon-mail.svg");
   width: percentage(21 / (95.59 + 35));
-  height: percentage(20 / (225 + 18));
+  // height: percentage(20 / (225 + 18));
+  height: percentage(20 / 18);
 
   @include vp-1023 {
     width: 21px;
@@ -76,7 +78,8 @@
 .contact-list__item--phone a::after {
   background-image: url("../img/svg/icon-phone.svg");
   width: percentage(21 / (172 + 35));
-  height: percentage(20 / (225 + 18));
+  // height: percentage(20 / (225 + 18));
+  height: percentage(20 / 18);
 
   @include vp-1023 {
     width: 21px;

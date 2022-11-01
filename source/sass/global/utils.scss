@@ -65,3 +65,26 @@
   /* stylelint-disable-next-line */
   transition: none !important;
 }
+
+.is-grid {
+  position: relative;
+  padding: 50px 0;
+  min-height: 100vh;
+}
+
+.is-grid::after {
+  content: "";
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  opacity: 0.15;
+  left: percentage(350 / 1920);
+  right: percentage(350 / 1920);
+  background: repeating-linear-gradient(90deg,
+              #ff0000 0,
+              #ff0000 percentage(95 / (1920 - 350 * 2)),
+              transparent percentage(95 / (1920 - 350 * 2)),
+              transparent percentage(95 / (1920 - 350 * 2)) + percentage(30 / (1920 - 350 * 2)));
+  pointer-events: none;
+}
