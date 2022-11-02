@@ -1,11 +1,15 @@
 .main-nav {
   display: flex;
-  width: percentage(785 / 1160);
+  width: percentage(calc(785 / 1160));
   justify-content: space-between;
 
   @include vp-1023 {
-    width: auto;
+    width: percentage(calc(435 / 650));
     align-self: flex-start;
+  }
+
+  @include vp-767 {
+    width: percentage(calc(160 / 259));
   }
 }
 
@@ -18,15 +22,11 @@
   font-family: $ff-roboto-condensed;
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: calc(14 / 1920) * 100vw;
+  line-height: calc(16 / 1920) * 100vw;
   padding: percentage(10 / 785) percentage(15 / 785);
   border-radius: 3px;
   align-self: center;
-
-  @media (max-width: $vp-1920) {
-    font-size: (14 / 1920) * 100vw;
-  }
 
   @include vp-1023 {
     display: none;

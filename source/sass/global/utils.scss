@@ -68,8 +68,6 @@
 
 .is-grid {
   position: relative;
-  padding: 50px 0;
-  min-height: 100vh;
 }
 
 .is-grid::after {
@@ -79,12 +77,32 @@
   top: 0;
   bottom: 0;
   opacity: 0.15;
-  left: percentage(350 / 1920);
-  right: percentage(350 / 1920);
+  pointer-events: none;
+  left: percentage(calc(350 / 1920));
+  right: percentage(calc(350 / 1920));
   background: repeating-linear-gradient(90deg,
               #ff0000 0,
-              #ff0000 percentage(95 / (1920 - 350 * 2)),
-              transparent percentage(95 / (1920 - 350 * 2)),
-              transparent percentage(95 / (1920 - 350 * 2)) + percentage(30 / (1920 - 350 * 2)));
-  pointer-events: none;
+              #ff0000 percentage(calc(95 / (1920 - 350 * 2))),
+              transparent percentage(calc(95 / (1920 - 350 * 2))),
+              transparent percentage(calc(95 / (1920 - 350 * 2))) + percentage(calc(30 / (1920 - 350 * 2))));
+
+  @include vp-1023 {
+    left: percentage(50 / 770);
+    right: percentage(50 / 770);
+    background: repeating-linear-gradient(90deg,
+              #ff0000 0,
+              #ff0000 percentage(calc(110 / (770 - 50 * 2))),
+              transparent percentage(calc(110 / (770 - 50 * 2))),
+              transparent percentage(calc(110 / (770 - 50 * 2))) + percentage(calc(30 / (770 - 50 * 2))));
+  }
+
+  @include vp-767 {
+    left: percentage(25 / 320);
+    right: percentage(25 / 320);
+    background: repeating-linear-gradient(90deg,
+              #ff0000 0,
+              #ff0000 percentage(calc(120 / (320 - 25 * 2))),
+              transparent percentage(calc(120 / (320 - 25 * 2))),
+              transparent percentage(calc(120 / (320 - 25 * 2))) + percentage(calc(30 / (320 - 25 * 2))));
+  }
 }

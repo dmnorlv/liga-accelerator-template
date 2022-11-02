@@ -25,17 +25,16 @@
           <a class="main-header__logo">
             <picture>
               <source media="(min-width: 768px)" srcset="img/svg/logo.svg">
-              <img src="img/svg/logo-mobile.svg" width="35" height="35" alt="Логотип компании.">
+              <img src="img/svg/logo-mobile.svg" width="215" height="55" alt="Логотип компании.">
             </picture>
           </a>
-          <!-- contacts-list__link contacts-list__link--mail, contacts-list__link contacts-list__link--phone -->
           <nav class="main-header__nav main-nav">
             <ul class="main-nav__contact-list contact-list">
-              <li class="contact-list__item contact-list__item--mail">
-                <a href="mailto:info@sd.ru"><span>info@sd.ru</span></a>
+              <li class="contact-list__item">
+                <a class="contact-list__link contact-list__link--mail" aria-label="написать нам на почту info@sd.ru" href="mailto:info@sd.ru"><span>info@sd.ru</span></a>
               </li>
-              <li class="contact-list__item contact-list__item--phone">
-                <a href="tel:+74950005252"><span>+7 (495) 000 52 52</span></a>
+              <li class="contact-list__item">
+                <a class="contact-list__link contact-list__link--phone" aria-label="позвонить нам по номеру +74950005252" href="tel:+74950005252"><span>+7 (495) 000 52 52</span></a>
               </li>
             </ul>
             <button class="main-nav__button" type="button">Заказать звонок</button>

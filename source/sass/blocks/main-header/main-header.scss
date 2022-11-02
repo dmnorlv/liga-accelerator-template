@@ -1,51 +1,48 @@
 .main-header__wrapper {
-  padding-left: percentage(350 / 1920);
-  padding-right: percentage(410 / 1920);
-  padding-top: percentage(30 / 1920);
-  padding-bottom: percentage(35 / 1920);
+  padding-left: percentage(calc(350 / 1920));
+  padding-right: percentage(calc(410 / 1920));
+  padding-top: percentage(calc(30 / 1920));
+  padding-bottom: percentage(calc(35 / 1920));
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 
   @include vp-1023 {
-    padding-left: percentage(50 / 770);
-    padding-right: percentage(70 / 770);
-    padding-top: 20px;
-    padding-bottom: 25 - 19px;
+    padding-left: percentage(calc(50 / 770));
+    padding-right: percentage(calc(70 / 770));
+    padding-top: percentage(calc(20 / 770));
+    padding-bottom: percentage(calc(20 / 770));
   }
 
   @include vp-767 {
-    padding-left: percentage(26 / 320);
-    padding-right: percentage(35 / 320);
-    padding-top: 15px;
+    padding-left: percentage(calc(26 / 320));
+    padding-right: percentage(calc(35 / 320));
+    padding-top: percentage(calc(15 / 320));
+    padding-bottom: percentage(calc(20 / 320));
     min-width: 320px;
   }
 }
 
 .main-header__container {
-  max-width: 1160px;
   min-width: 259px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .main-header__logo {
-  width: percentage(215 / 1160);
-  max-width: 215px;
-  min-width: 35px;
+  display: block;
+  width: percentage(calc(215 / 1160));
 
   @include vp-1023 {
-    width: 215px;
+    width: percentage(calc(215 / 650));
   }
 
   @include vp-767 {
-    width: 35px;
-    align-self: flex-end;
+    width: percentage(calc(35 / 259));
+    align-self: center;
   }
 }
 
 .main-header__logo img {
-  @media (min-width: $vp-768) {
-    width: 215px;
-    height: 55px;
-  }
+  width: 100%;
+  height: auto;
 }
