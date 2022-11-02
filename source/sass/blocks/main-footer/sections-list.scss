@@ -3,16 +3,26 @@
   padding: 0;
   list-style-type: none;
   display: grid;
-  grid-template-columns: percentage(220 / 470) percentage(220 / 470);
-  grid-auto-flow: row dense;
-  column-gap: percentage(30 / 470);
-  // row-gap: percentage(10 / 130);
+  grid-template-columns: percentage(calc(220 / 470)) percentage(calc(220 / 470));
+  column-gap: 30px;
+
+  @include vp-1919 {
+    column-gap: 22.5px;
+  }
+
+  @include vp-1439 {
+    column-gap: 20px;
+  }
+
+  @include vp-1279 {
+    column-gap: 16px;
+  }
 }
 
 .section-list__item:not(:last-child) {
-  padding-bottom: percentage(10 / 220);
+  padding-bottom: percentage(calc(10 / 220));
 }
 
 .section-list__item {
-  line-height: 20px;
+  line-height: calc(20 / 1920) * 100vw;
 }

@@ -9,13 +9,14 @@
 .contacts-list__item address {
   color: rgba(255, 255, 255, 0.7);
   font-style: normal;
-  line-height: 20px;
+  font-size: calc(16 / 1920) * 100vw;
+  line-height: calc(20 / 1920) * 100vw;
 }
 
 .contacts-list__item {
-  line-height: 20px;
+  line-height: calc(20 / 1920) * 100vw;
 }
 
 .contacts-list__item:not(:last-child) {
-  padding-bottom: percentage(10 / 345);
+  padding-bottom: percentage(calc(10 / 345));
 }

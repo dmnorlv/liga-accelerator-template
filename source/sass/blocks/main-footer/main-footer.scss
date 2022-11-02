@@ -1,41 +1,52 @@
 .main-footer {
-  padding: percentage(50 / 1920) percentage(350 / 1920) percentage(55 / 1920);
+  padding: percentage(calc(50 / 1920)) percentage(calc(350 / 1920)) percentage(calc(55 / 1920));
   background-color: $color-black-pearl-2;
 }
 
 .main-footer__title {
   color: $color-default-white;
   font-family: $ff-roboto-condensed;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: calc(15 / 1920) * 100vw;
+  line-height: calc(20 / 1920) * 100vw;
   font-weight: 400;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: percentage(20 / 470);
+  margin-bottom: percentage(calc(20 / 470));
 }
 
 .main-footer__container {
   display: flex;
-  column-gap: percentage(160 / 1220);
 }
 
 .main-footer__social-wrapper {
   display: flex;
   flex-direction: column;
-  width: percentage(215 / 1220);
+  width: percentage(calc(215 / 1220));
 }
 
 .main-footer__link {
   color: rgba(255, 255, 255, 0.7);
   display: inline-block;
   vertical-align: bottom;
+  font-size: calc(16 / 1920) * 100vw;
 }
 
 .main-footer__group {
   display: grid;
   max-width: 845px;
-  width: percentage(845 / 1220);
-  grid-template-columns: percentage(470 / 845) percentage(345 / 845);
-  column-gap: percentage(30 / 845);
+  width: percentage(calc(845 / 1220));
+  grid-template-columns: percentage(calc(470 / 845)) percentage(calc(30 / 845)) percentage(calc(345 / 845));
+  // column-gap: percentage(30 / 845);
   padding-top: 5px;
+  margin-left: percentage(160 / 1220);
+}
+
+.main-footer__sections-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.main-footer__contacts-wrapper {
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
