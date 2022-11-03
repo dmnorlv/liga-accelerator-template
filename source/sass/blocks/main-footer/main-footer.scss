@@ -1,6 +1,10 @@
 .main-footer {
   padding: percentage(calc(50 / 1920)) percentage(calc(350 / 1920)) percentage(calc(55 / 1920));
   background-color: $color-black-pearl-2;
+
+  @include vp-1023 {
+    padding: percentage(calc(50 / 770)) percentage(calc(50 / 770)) percentage(calc(50 / 770));
+  }
 }
 
 .main-footer__title {
@@ -16,12 +20,22 @@
 
 .main-footer__container {
   display: flex;
+
+  @include vp-1023 {
+    flex-direction: column;
+  }
 }
 
 .main-footer__social-wrapper {
   display: flex;
   flex-direction: column;
   width: percentage(calc(215 / 1220));
+
+  @include vp-1023 {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 .main-footer__link {
@@ -33,12 +47,18 @@
 
 .main-footer__group {
   display: grid;
-  max-width: 845px;
   width: percentage(calc(845 / 1220));
   grid-template-columns: percentage(calc(470 / 845)) percentage(calc(30 / 845)) percentage(calc(345 / 845));
-  // column-gap: percentage(30 / 845);
   padding-top: 5px;
-  margin-left: percentage(160 / 1220);
+  margin-left: percentage(calc(160 / 1220));
+
+  @include vp-1023 {
+    margin: 0;
+    margin-top: percentage(calc(35 / 770));
+    padding: 0;
+    width: 100%;
+    grid-template-columns: percentage(calc(220 / 670)) percentage(calc(130 / 670)) percentage(calc(320 / 770));
+  }
 }
 
 .main-footer__sections-wrapper {
@@ -49,4 +69,18 @@
 .main-footer__contacts-wrapper {
   grid-column-start: 3;
   grid-column-end: 4;
+}
+
+.main-footer__logo {
+  display: block;
+  width: 100%;
+
+  @include vp-1023 {
+    width: percentage(calc(215 / 670));
+  }
+}
+
+.main-footer__logo img {
+  width: 100%;
+  height: auto;
 }

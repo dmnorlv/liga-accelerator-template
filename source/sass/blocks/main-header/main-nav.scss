@@ -15,9 +15,9 @@
 
 .main-nav__button {
   width: percentage(160 / 785);
-  border: 1px solid #f2f5f7;
+  border: 1px solid $color-alice-blue-2;
   background-color: inherit;
-  color: #f2f5f7;
+  color: $color-alice-blue-2;
   text-transform: uppercase;
   font-family: $ff-roboto-condensed;
   font-style: normal;
@@ -27,6 +27,7 @@
   padding: percentage(10 / 785) percentage(15 / 785);
   border-radius: 3px;
   align-self: center;
+  letter-spacing: 0.05em;
 
   @include vp-1023 {
     display: none;

@@ -1,23 +1,43 @@
 .main-header__wrapper {
+  position: relative;
   padding-left: percentage(calc(350 / 1920));
   padding-right: percentage(calc(410 / 1920));
   padding-top: percentage(calc(30 / 1920));
-  padding-bottom: percentage(calc(35 / 1920));
-  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  padding-bottom: percentage(calc(15 / 1920));
+  background-color: $color-black-pearl;
 
   @include vp-1023 {
     padding-left: percentage(calc(50 / 770));
     padding-right: percentage(calc(70 / 770));
     padding-top: percentage(calc(20 / 770));
-    padding-bottom: percentage(calc(20 / 770));
+    padding-bottom: percentage(calc(10 / 770));
   }
 
   @include vp-767 {
     padding-left: percentage(calc(26 / 320));
     padding-right: percentage(calc(35 / 320));
-    padding-top: percentage(calc(15 / 320));
-    padding-bottom: percentage(calc(20 / 320));
+    padding-top: percentage(calc(10 / 320));
+    padding-bottom: percentage(calc(10 / 320));
     min-width: 320px;
+  }
+}
+
+.main-header__wrapper::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(180deg, $color-black-pearl 84.9%, rgba(4, 24, 39, 0) 100%);
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  @include vp-1023 {
+    height: 117.65%;
+  }
+
+  @include vp-767 {
+    height: 116.67%;
   }
 }
 

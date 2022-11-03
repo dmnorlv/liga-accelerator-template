@@ -3,10 +3,17 @@
   padding: 0;
   list-style: none;
   display: flex;
-  column-gap: percentage(15 / 150);
-  margin-top: percentage(30 / 215);
-  margin-left: percentage(10 / 215);
-  width: percentage(150 / 215);
+  flex-wrap: wrap;
+  column-gap: percentage(calc(15 / 150));
+  margin-top: percentage(calc(30 / 215));
+  margin-left: percentage(calc(10 / 215));
+  width: percentage(calc(150 / 215));
+
+  @include vp-1023 {
+    margin: 0;
+    width: percentage(calc(150 / 670));
+    align-self: center;
+  }
 }
 
 .social-list__link {
@@ -16,4 +23,9 @@
 
 .social-list__item {
   width: percentage(40 / 150);
+}
+
+.social-list__icon {
+  width: 100%;
+  height: auto;
 }

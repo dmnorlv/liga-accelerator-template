@@ -17,6 +17,11 @@
   @include vp-1279 {
     column-gap: 16px;
   }
+
+  @include vp-1023 {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .section-list__item:not(:last-child) {
@@ -25,4 +30,12 @@
 
 .section-list__item {
   line-height: calc(20 / 1920) * 100vw;
+
+  @include vp-1023 {
+    padding-bottom: percentage(calc(10 / 220));
+  }
+}
+
+.section-list__item:nth-child(2n + 1) {
+  order: -1;
 }
