@@ -91,9 +91,9 @@
     right: percentage(50 / 770);
     background: repeating-linear-gradient(90deg,
               #ff0000 0,
-              #ff0000 percentage(calc(110 / (770 - 50 * 2))),
-              transparent percentage(calc(110 / (770 - 50 * 2))),
-              transparent percentage(calc(110 / (770 - 50 * 2))) + percentage(calc(30 / (770 - 50 * 2))));
+              #ff0000 percentage(calc(145 / (770 - 50 * 2))),
+              transparent percentage(calc(145 / (770 - 50 * 2))),
+              transparent percentage(calc(145 / (770 - 50 * 2))) + percentage(calc(30 / (770 - 50 * 2))));
   }
 
   @include vp-767 {

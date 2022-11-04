@@ -13,6 +13,11 @@
     margin: 0;
     width: percentage(calc(150 / 670));
     align-self: center;
+    margin-right: -(percentage(calc(4 / 670)));
+  }
+
+  @include vp-767 {
+    width: percentage(calc(150 / 270));
   }
 }
 

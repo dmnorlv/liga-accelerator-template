@@ -52,7 +52,8 @@
         <div class="major-block__wrapper">
           <h2 class="major-block__title">Печатные платы</h2>
           <p class="major-block__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="major-block__link" href="#form"><span class="major-block__link-text">Получить бесплатную консультацию</span><span class="major-block__link-text-mobile">Бесплатная консультация</span></a>
+          <a class="major-block__link" href="#form"><span class="major-block__link-text">Получить бесплатную
+              консультацию</span><span class="major-block__link-text-mobile">Бесплатная консультация</span></a>
         </div>
       </section>
     </main>
@@ -88,38 +89,57 @@
             </li>
           </ul>
         </div>
-
+        <!--Дополнительное меню закрыто:
+              кнопка:        main-footer__button-sections main-footer__button-closed(изменяет картинку)
+              ul ссылок-1:   main-footer__sections main-footer__sections--primary visually-hidden
+              ul ссылок-2:   main-footer__sections main-footer__sections--primary visually-hidden
+        -->
+        <!--Контакты закрыты:
+              кнопка:        main-footer__button-contacts main-footer__button-closed
+              ul ссылок:     main-footer__contacts contacts-list visually-hidden
+        -->
         <div class="main-footer__group">
-          <div class="main-footer__sections-wrapper">
-            <h3 class="main-footer__title">Разделы сайта</h3>
-            <ul class="main-footer__sections sections-list">
-              <li class="section-list__item">
+          <div class="main-footer__sections-wrapper" role="navigation" aria-label="Дополнительное меню">
+            <div class="main-footer__heading-container main-footer__heading-container--js">
+              <h3 class="main-footer__title">Разделы сайта</h3>
+              <button class="main-footer__button-sections" type="button"><span
+                  class="visually-hidden">Открыть или закрыть разделы сайта.</span></button>
+            </div>
+            <ul class="main-footer__sections main-footer__sections--primary">
+              <li class="main-footer__sections-item">
                 <a class="main-footer__link" href="#">О компании</a>
               </li>
-              <li class="section-list__item">
-                <a class="main-footer__link" href="#">Комплектующие</a>
-              </li>
-              <li class="section-list__item">
+              <li class="main-footer__sections-item">
                 <a class="main-footer__link" href="#">Продукты</a>
               </li>
-              <li class="section-list__item">
-                <a class="main-footer__link" href="#">Доставка</a>
-              </li>
-              <li class="section-list__item">
+              <li class="main-footer__sections-item">
                 <a class="main-footer__link" href="#">Производство печатных плат</a>
               </li>
-              <li class="section-list__item">
-                <a class="main-footer__link" href="#">Контакты</a>
-              </li>
-              <li class="section-list__item">
+              <li class="main-footer__sections-item main-footer__sections-item--last">
                 <a class="main-footer__link" href="#">Монтаж печатных плат</a>
+              </li>
+            </ul>
+
+            <ul class="main-footer__sections main-footer__sections--secondary">
+              <li class="main-footer__sections-item">
+                <a class="main-footer__link" href="#">Комплектующие</a>
+              </li>
+              <li class="main-footer__sections-item">
+                <a class="main-footer__link" href="#">Доставка</a>
+              </li>
+              <li class="main-footer__sections-item main-footer__sections-item--last">
+                <a class="main-footer__link" href="#">Контакты</a>
               </li>
             </ul>
           </div>
 
-          <div class="main-footer__contacts-wrapper">
-            <h3 class="main-footer__title">Наш офис</h3>
-            <ul class="main-footer__contacts contacts-list">
+          <div class="main-footer__contacts-wrapper" role="contentinfo">
+            <div class="main-footer__heading-container">
+              <h3 class="main-footer__title">Наш офис</h3>
+              <button class="main-footer__button-contacts" type="button"><span class="visually-hidden">Открыть или
+                  закрыть контакты компании.</span></button>
+            </div>
+            <ul class="main-footer__contacts contacts-list visually-hidden">
               <li class="contacts-list__item">
                 <address>г. Мытищи, Олимпийский проспект, д.10</address>
               </li>
@@ -138,59 +158,14 @@
 
       </div>
     </footer>
+    <a class="visually-hidden product-link" aria-label="ссылка на продукт" href="#">
+      <svg class="product-link__icon" width="5" height="10">
+        <use xlink:href="img/sprite_auto.svg#arrow"></use>
+      </svg>
+    </a>
   </div>
-
-  <!-- Переиспользуемые компоненты -->
-  <!-- <a class="product-link" aria-label="ссылка на продукт" href="#">
-        <svg class="product-link__icon" width="5" height="10">
-          <use xlink:href="img/sprite_auto.svg#arrow"></use>
-        </svg>
-      </a> -->
-
-  <!-- Тесты -->
-
-
-  <!-- Модалки -->
-  <!-- <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div> -->
-
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
 </html>
-
-<!-- <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-          </div>
-        </section> -->
