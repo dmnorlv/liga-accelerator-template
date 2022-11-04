@@ -9,4 +9,5 @@ env:
   browser: true
   commonjs: true
 
-extends: "./eslintconfig.cjs"
+extends: "htmlacademy/vanilla"
+

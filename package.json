@@ -1,8 +1,8 @@
 {
-  "name": "Liga-A-accelerator-template",
+  "name": "smart-device",
   "version": "2.0.0",
   "type": "module",
-  "description": "Стартовый шаблон сборки Лиги А",
+  "description": "первый проект на Акселераторе",
   "browserslist": [
     "last 3 versions",
     "IE 11",
@@ -11,6 +11,7 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "lint": "eslint source/js/",
     "test": "npm run editorconfig & npm run stylelint & eslint source/js/",
     "build": "cross-env NODE_ENV=production gulp build & gulp imagemin",
     "start": "cross-env NODE_ENV=development gulp start",
@@ -51,7 +52,8 @@
     "sass": "1.53.0",
     "stylelint": "13.13.1",
     "webpack": "4.42.0",
-    "webpack-stream": "5.2.1"
+    "webpack-stream": "5.2.1",
+    "eslint-config-htmlacademy": "5.1.2"
   },
   "engines": {
     "node": ">=16.15.1"
