@@ -14,13 +14,14 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/content-wrapper";
 
 // Blocks
 // ---------------------------------
 
 @import "blocks/btn";
 @import "blocks/modal";
-@import "blocks/product-link";
+@import "blocks/link";
 @import "blocks/main-header/main-header";
 @import "blocks/main-header/main-nav";
 @import "blocks/main-header/contact-list";
@@ -28,6 +29,9 @@
 @import "blocks/main-footer/social-list";
 @import "blocks/main-footer/contacts-list";
 @import "blocks/major-block/major-block";
+@import "blocks/advantages/advantages";
+@import "blocks/feed-back/feed-back";
+@import "blocks/about/about";
 
 // ---------------------------------
 

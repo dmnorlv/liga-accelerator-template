@@ -1,0 +1,45 @@
+.feed-back {
+  // background-image: linear-gradient(135deg, $color-deep-sky-blue-2 30.5%, $color-deep-sky-blue 30.5%);
+  background-color: $color-deep-sky-blue;
+  position: relative;
+}
+
+.feed-back::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: $color-deep-sky-blue-2;
+  clip-path: polygon(0% 100%, 50.5% 0%, 0% 0%);
+  z-index: 1;
+}
+
+.feed-back__container {
+  margin: 0 auto;
+  max-width: 1220px;
+  width: 100%;
+  height: 840px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.feed-back__container img {
+  order: -1;
+
+
+  @include vp-1919 {
+    width: percentage(510 / 1220);
+    height: auto;
+  }
+}
+
+.feed-back__group {
+  position: relative;
+}
+
+.feed-back__wrapper {
+  display: flex;
+}

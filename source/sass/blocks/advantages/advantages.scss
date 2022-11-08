@@ -1,0 +1,153 @@
+.advantages__container {
+  padding-top: percentage(calc(120 / 1920));
+  padding-bottom: percentage(calc(60 / 1920));
+
+  @include vp-1023 {
+    padding-top: percentage(calc(80 / 770));
+    padding-bottom: percentage(calc(40 / 770));
+  }
+
+  @include vp-767 {
+    padding-top: percentage(calc(50 / 320));
+    padding-bottom: percentage(calc(25 / 320));
+  }
+}
+
+.advantages__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  gap: calc(30 / 1920) * 100vw;
+  grid-template-columns: percentage(calc(595 / 1220)) percentage(calc(595 / 1220)); //ширина контента секции 1220
+
+  @include vp-1023 {
+    grid-template-columns: percentage(calc(320 / 670)) percentage(calc(320 / 670)); //ширина контента секции 670
+    gap: calc(30 / 770) * 100vw;
+  }
+
+  @include vp-767 {
+    grid-template-columns: auto;
+    gap: calc(30 / 320) * 100vw;
+  }
+
+  @media (max-width: 320px) {
+    gap: 30px;
+  }
+}
+
+.advantages__card {
+  padding: percentage(calc(40 / 595)) percentage(calc(45 / 595)); //ширина контента карточки 505px | карточка 595px
+  position: relative;
+  min-height: calc(300 / 1920) * 100vw;
+  border: 1px solid $color-whisper;
+
+  @include vp-1023 {
+    min-height: (360 / 770) * 100vw;
+    padding: percentage(calc(39 / 320)) percentage(calc(29 / 320)) percentage(calc(30 / 320)) percentage(calc(44 / 320)); //ширина контента карточки 228px | карточка 320px
+  }
+
+  @include vp-767 {
+    min-height: (325 / 320) * 100vw;
+    padding: percentage(calc(29 / 270)); //ширина контента карточки 210px | карточка 270px
+  }
+}
+
+.advantages__card::after {
+  position: absolute;
+  content: "";
+  width: percentage(calc(5 / 320));
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: $color-deep-sky-blue;
+}
+
+.advantages__card-icon {
+  stroke: $color-deep-sky-blue;
+  fill: $color-deep-sky-blue;
+  width: percentage(calc(35 / 505));
+  height: auto;
+
+  @include vp-1023 {
+    width: percentage(calc(35 / 245));
+  }
+
+  @include vp-767 {
+    width: percentage(calc(35 / 210));
+  }
+}
+
+.advantages__card-title {
+  color: $color-deep-sky-blue;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  margin: 0;
+  font-size: 24px;
+  line-height: 25px;
+  margin-bottom: percentage(calc(15 / 505));
+  margin-top: percentage(calc(20 / 505));
+
+  @include vp-1919 {
+    font-size: calc(24 / 1920) * 100vw;
+    line-height: calc(25 / 1920) * 100vw;
+  }
+
+  @include vp-1023 {
+    margin-bottom: percentage(calc(15 / 243));
+    margin-top: percentage(calc(20 / 243));
+    font-size: calc(24 / 770) * 100vw;
+    line-height: calc(25 / 770) * 100vw;
+  }
+
+  @include vp-767 {
+    margin-bottom: percentage(calc(15 / 243));
+    margin-top: percentage(calc(20 / 243));
+    font-size: calc(20 / 320) * 100vw;
+    line-height: calc(22 / 320) * 100vw;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.advantages__card-description {
+  margin: 0;
+
+  @include vp-1919 {
+    font-size: calc(16 / 1920) * 100vw;
+    line-height: calc(21 / 1920) * 100vw;
+  }
+
+  @include vp-1023 {
+    font-size: calc(16 / 770) * 100vw;
+    line-height: calc(21 / 770) * 100vw;
+  }
+
+  @include vp-767 {
+    font-size: calc(14 / 320) * 100vw;
+    line-height: calc(19 / 320) * 100vw;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.advantages__card:hover {
+  background-color: $color-deep-sky-blue;
+  border-color: $color-deep-sky-blue;
+}
+
+.advantages__card:hover .advantages__card-description,
+.advantages__card:hover .advantages__card-title {
+  color: $color-alice-blue-2;
+}
+
+.advantages__card:hover .advantages__card-icon {
+  stroke: $color-alice-blue;
+  fill: $color-alice-blue;
+}
