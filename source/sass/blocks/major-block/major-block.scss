@@ -1,6 +1,6 @@
 .major-block {
-  padding: percentage(calc(185 / 1920)) percentage(calc(725 / 1920))
-    percentage(calc(280 / 1920)) percentage(calc(475 / 1920));
+  padding: 185px percentage(calc(725 / 1920))
+    280px percentage(calc(475 / 1920));
   background-color: $color-black-pearl;
   background-image: url("../img/main-background-desktop.jpg");
   background-repeat: no-repeat;
@@ -12,6 +12,11 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/main-background-desktop-2x.jpg");
+  }
+
+  @include vp-1919 {
+    padding-top: percentage(calc(185 / 1920));
+    padding-bottom: percentage(calc(280 / 1920));
   }
 
   @include vp-1023 {
@@ -35,17 +40,32 @@
       background-image: url("../img/main-background-mobile-2x.jpg");
     }
   }
+
+  @media (max-width: 320px) {
+    padding: 90px 25px 190px;
+  }
+}
+
+.major-block__wrapper {
+  margin: 0 auto;
+  max-width: 720px;
+  min-width: 270px;
 }
 
 .major-block__title {
   margin: 0;
-  font-size: calc(80 / 1920) * 100vw;
-  line-height: calc(84 / 1920) * 100vw;
+  font-size: 80px;
+  line-height: 84px;
   text-transform: uppercase;
   font-family: $ff-roboto-condensed;
   color: $color-alice-blue-2;
   margin-bottom: percentage(calc(40 / 720));
   letter-spacing: 0.07em;
+
+  @include vp-1919 {
+    font-size: calc(80 / 1920) * 100vw;
+    line-height: calc(84 / 1920) * 100vw;
+  }
 
   @include vp-1023 {
     font-size: calc(64 / 770) * 100vw;
@@ -67,11 +87,16 @@
 
 .major-block__description {
   margin: 0;
-  font-size: calc(22 / 1920) * 100vw;
-  line-height: calc(34 / 1920) * 100vw;
+  font-size: 22px;
+  line-height: 34px;
   color: $color-alice-blue-2;
   width: percentage(calc(685 / 720));
   margin-bottom: percentage(calc(40 / 720));
+
+  @include vp-1919 {
+    font-size: calc(22 / 1920) * 100vw;
+    line-height: calc(34 / 1920) * 100vw;
+  }
 
   @include vp-1023 {
     font-size: calc(22 / 770) * 100vw;
@@ -96,8 +121,8 @@
   width: percentage(calc(410 / 720));
   display: block;
   font-weight: 700;
-  font-size: calc(18 / 1920) * 100vw;
-  line-height: calc(21 / 1920) * 100vw;
+  font-size: 18px;
+  line-height: 21px;
   color: $color-alice-blue-2;
   text-transform: uppercase;
   font-family: $ff-roboto-condensed;
@@ -106,6 +131,11 @@
   border-radius: 3px;
   text-align: center;
   letter-spacing: 0.05em;
+
+  @include vp-1919 {
+    font-size: calc(18 / 1920) * 100vw;
+    line-height: calc(21 / 1920) * 100vw;
+  }
 
   @include vp-1023 {
     width: percentage(calc(410 / 670));
