@@ -1,6 +1,11 @@
 .about__container {
-  padding-top: percentage(calc(60 / 1920));
-  padding-bottom: percentage(calc(100 / 1920));
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  @include vp-1919 {
+    padding-top: percentage(calc(60 / 1920));
+    padding-bottom: percentage(calc(100 / 1920));
+  }
 
   @include vp-1023 {
     padding-top: percentage(calc(40 / 770));
@@ -11,11 +16,14 @@
     padding-top: percentage(calc(25 / 320));
     padding-bottom: percentage(calc(80 / 320));
   }
+
+  @media (max-width: 320px) {
+    padding-top: 25px;
+    padding-bottom: 80px;
+  }
 }
 
 .about__wrapper {
-  max-width: 1220px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: percentage(150 / 1220) percentage(100 / 1220) percentage(970 / 1220);
 
@@ -73,11 +81,11 @@
 
 .about__group p {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   @include vp-1919 {
-    font-size: calc(16 / 1919) * 100vw;
-    line-height: calc(22 / 1919) * 100vw;
+    font-size: calc(16 / 1920) * 100vw;
+    line-height: calc(22 / 1920) * 100vw;
     margin-bottom: percentage(calc(22 / 970));
   }
 
