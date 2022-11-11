@@ -18,7 +18,11 @@
 .contacts-list__item address {
   color: rgba(255, 255, 255, 0.7);
   font-style: normal;
-  font-size: calc(16 / 1920) * 100vw;
+  font-size: 16px;
+
+  @include vp-1919 {
+    font-size: calc(16 / 1920) * 100vw;
+  }
 
   @include vp-1023 {
     font-size: calc(16 / 770) * 100vw;
@@ -34,7 +38,11 @@
 }
 
 .contacts-list__item {
-  line-height: calc(20 / 1920) * 100vw;
+  line-height: 20px;
+
+  @include vp-1919 {
+    line-height: calc(20 / 1920) * 100vw;
+  }
 
   @include vp-1023 {
     line-height: calc(20 / 770) * 100vw;
@@ -42,6 +50,10 @@
 
   @include vp-767 {
     line-height: calc(25 / 320) * 100vw;
+  }
+
+  @media (max-width: 320px) {
+    line-height: 25px;
   }
 }
 
