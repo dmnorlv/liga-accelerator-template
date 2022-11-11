@@ -1,6 +1,11 @@
 .advantages__container {
-  padding-top: percentage(calc(120 / 1920));
-  padding-bottom: percentage(calc(60 / 1920));
+  padding-top: 120px;
+  padding-bottom: 60px;
+
+  @include vp-1919 {
+    padding-top: percentage(calc(120 / 1920));
+    padding-bottom: percentage(calc(60 / 1920));
+  }
 
   @include vp-1023 {
     padding-top: percentage(calc(80 / 770));
@@ -11,6 +16,11 @@
     padding-top: percentage(calc(50 / 320));
     padding-bottom: percentage(calc(25 / 320));
   }
+
+  @media (max-width: 320px) {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
 }
 
 .advantages__list {
@@ -18,11 +28,15 @@
   margin: 0;
   list-style-type: none;
   display: grid;
-  gap: calc(30 / 1920) * 100vw;
-  grid-template-columns: percentage(calc(595 / 1220)) percentage(calc(595 / 1220)); //ширина контента секции 1220
+  gap: 30px;
+  grid-template-columns: percentage(calc(595 / 1220)) percentage(calc(595 / 1220));
+
+  @include vp-1919 {
+    gap: calc(30 / 1920) * 100vw;
+  }
 
   @include vp-1023 {
-    grid-template-columns: percentage(calc(320 / 670)) percentage(calc(320 / 670)); //ширина контента секции 670
+    grid-template-columns: percentage(calc(320 / 670)) percentage(calc(320 / 670));
     gap: calc(30 / 770) * 100vw;
   }
 
@@ -37,10 +51,14 @@
 }
 
 .advantages__card {
-  padding: percentage(calc(40 / 595)) percentage(calc(45 / 595)); //ширина контента карточки 505px | карточка 595px
+  padding: percentage(calc(40 / 595)) percentage(calc(45 / 595));
   position: relative;
-  min-height: calc(300 / 1920) * 100vw;
+  min-height: 300px;
   border: 1px solid $color-whisper;
+
+  @include vp-1919 {
+    min-height: calc(300 / 1920) * 100vw;
+  }
 
   @include vp-1023 {
     min-height: (360 / 770) * 100vw;
@@ -48,19 +66,31 @@
   }
 
   @include vp-767 {
-    min-height: (325 / 320) * 100vw;
-    padding: percentage(calc(29 / 270)); //ширина контента карточки 210px | карточка 270px
+    min-height: (340 / 320) * 100vw;
+    padding: percentage(calc(29 / 270));
+  }
+
+  @media (max-width: 320px) {
+    min-height: 340px;
   }
 }
 
 .advantages__card::after {
   position: absolute;
   content: "";
-  width: percentage(calc(5 / 320));
+  width: percentage(calc(5 / 595));
   height: 100%;
   left: 0;
   top: 0;
   background-color: $color-deep-sky-blue;
+
+  @include vp-1023 {
+    width: percentage(calc(5 / 320));
+  }
+
+  @include vp-767 {
+    width: percentage(calc(5 / 270));
+  }
 }
 
 .advantages__card-icon {
