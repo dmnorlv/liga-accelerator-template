@@ -14,7 +14,6 @@
 }
 
 .main-nav__button {
-  width: percentage(160 / 785);
   border: 1px solid $color-alice-blue-2;
   background-color: inherit;
   color: $color-alice-blue-2;
@@ -22,12 +21,19 @@
   font-family: $ff-roboto-condensed;
   font-style: normal;
   font-weight: 700;
-  font-size: calc(14 / 1920) * 100vw;
-  line-height: calc(16 / 1920) * 100vw;
+  font-size: 14px;
+  line-height: 16px;
+
+  width: percentage(160 / 785);
   padding: percentage(10 / 785) percentage(15 / 785);
   border-radius: 3px;
   align-self: center;
   letter-spacing: 0.05em;
+
+  @include vp-1919 {
+    font-size: calc(14 / 1920) * 100vw;
+    line-height: calc(16 / 1920) * 100vw;
+  }
 
   @include vp-1023 {
     display: none;

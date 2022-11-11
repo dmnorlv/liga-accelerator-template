@@ -1,5 +1,4 @@
 .feed-back__container {
-  // background-image: linear-gradient(135deg, $color-deep-sky-blue-2 30.5%, $color-deep-sky-blue 30.5%);
   background-color: $color-deep-sky-blue;
   position: relative;
   padding-top: 170px;
@@ -8,6 +7,21 @@
   @include vp-1919 {
     padding-top: percentage(calc(170 / 1920));
     padding-bottom: percentage(calc(250 / 1920));
+  }
+
+  @include vp-1023 {
+    padding-top: percentage(calc(50 / 770));
+    padding-bottom: percentage(calc(125 / 770));
+  }
+
+  @include vp-767 {
+    padding-top: percentage(calc(50 / 320));
+    padding-bottom: percentage(calc(90 / 320));
+  }
+
+  @media (max-width: 320px) {
+    padding-top: 50px;
+    padding-bottom: 90px;
   }
 }
 
@@ -21,6 +35,10 @@
   background-color: $color-deep-sky-blue-2;
   clip-path: polygon(0% 100%, 50.5% 0%, 0% 0%);
   z-index: 1;
+
+  @include vp-1023 {
+    display: none;
+  }
 }
 
 .feed-back__wrapper {
@@ -33,11 +51,20 @@
   @include vp-1919 {
     column-gap: calc(120 / 1920) * 100vw;
   }
+
+  @include vp-1023 {
+    grid-template-columns: auto;
+    column-gap: initial;
+  }
 }
 
 .feed-back__wrapper img {
   width: 100%;
   height: auto;
+
+  @include vp-1023 {
+    display: none;
+  }
 }
 
 .feed-back__title {
@@ -110,31 +137,43 @@
     column-gap: calc(30 / 1920) * 100vw;
     row-gap: calc(20 / 1920) * 100vw;
   }
+
+  @include vp-1023 {
+    grid-template-columns: percentage(calc(320 / 670)) percentage(calc(320 / 670));
+    column-gap: calc(30 / 770) * 100vw;
+    row-gap: calc(20 / 770) * 100vw;
+  }
+
+  @include vp-767 {
+    grid-template-columns: auto;
+    row-gap: calc(20 / 320) * 100vw;
+  }
+
+  @media (max-width: 320px) {
+    row-gap: 20px;
+  }
 }
 
 .feed-back__form input[type="text"],
 .feed-back__form input[type="tel"],
 .feed-back__form textarea {
-  background-color: rgba(4, 20, 39, 0.15);
-  color: $color-default-white;
-  border: none;
-  border-radius: 3px;
-  font-family: $ff-pt-mono;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  padding: percentage(calc(15 / 275));
-
   @include vp-1919 {
+    padding: percentage(calc(15 / 275));
     font-size: calc(16 / 1920) * 100vw;
-    line-height: calc(22 / 1920) * 100vw;
+    line-height: calc(20 / 1920) * 100vw;
   }
-}
 
-.feed-back__form input[type="text"]::placeholder,
-.feed-back__form input[type="tel"]::placeholder,
-.feed-back__form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  @include vp-1023 {
+    padding: percentage(calc(15 / 320));
+    font-size: calc(16 / 770) * 100vw;
+    line-height: calc(20 / 770) * 100vw;
+  }
+
+  @include vp-767 {
+    padding: percentage(calc(15 / 270));
+    font-size: calc(16 / 320) * 100vw;
+    line-height: calc(20 / 320) * 100vw;
+  }
 }
 
 .feed-back__form textarea {
@@ -142,61 +181,128 @@
   margin-bottom: percentage(calc(15 / 580));
   padding: percentage(calc(15 / 580));
   padding-top: percentage(calc(25 / 580));
+
+  @include vp-1023 {
+    margin-bottom: percentage(calc(15 / 670));
+    padding: percentage(calc(15 / 670));
+    padding-top: percentage(calc(32 / 670));
+  }
+
+  @include vp-767 {
+    grid-column: 1/2;
+    margin-bottom: percentage(calc(10 / 270));
+    padding: percentage(calc(15 / 270));
+    padding-top: percentage(calc(25 / 270));
+  }
 }
 
 .feed-back__form button {
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  background-color: $color-black-pearl;
-  font-family: $ff-roboto-condensed;
-  color: $color-default-white;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 15px;
   width: percentage(calc(265 / 275));
-  padding: percentage(calc(15 / 265)) percentage(calc(25 / 265));
   align-self: flex-start;
 
   @include vp-1919 {
+    padding: percentage(calc(15 / 275)) percentage(calc(25 / 275));
     font-size: calc(16 / 1920) * 100vw;
     line-height: calc(15 / 1920) * 100vw;
+  }
+
+  @include vp-1023 {
+    width: percentage(calc(265 / 320));
+    padding: percentage(calc(15 / 320)) percentage(calc(25 / 320));
+    font-size: calc(16 / 770) * 100vw;
+    line-height: calc(15 / 770) * 100vw;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: percentage(calc(15 / 270)) percentage(calc(25 / 270));
+    font-size: calc(16 / 320) * 100vw;
+    line-height: calc(15 / 320) * 100vw;
+    margin-bottom: percentage(calc(5 / 270));
+  }
+
+  @media (max-width: 320px) {
+    font-size: 16px;
+    line-height: 15px;
   }
 }
 
 .feed-back__form label {
-  position: relative;
-  color: rgba(255, 255, 255, 0.8);
   width: percentage(calc(260 / 275));
-  padding-left: percentage(calc(26 / 275));
+
   margin-left: percentage(calc(10 / 275));
   margin-top: percentage(calc(15 / 275));
-  font-size: 14px;
-  line-height: 16px;
+  align-self: flex-start;
 
   @include vp-1919 {
+    padding-left: percentage(calc(26 / 275));
     font-size: calc(14 / 1920) * 100vw;
-    line-height: calc(16 / 1920) * 100vw;
+    line-height: calc(15 / 1920) * 100vw;
+  }
+
+  @include vp-1023 {
+    width: percentage(calc(260 / 320));
+    padding-left: percentage(calc(25 / 320));
+    margin-left: 0;
+    margin-top: percentage(calc(10 / 320));
+    font-size: calc(14 / 770) * 100vw;
+    line-height: calc(15 / 770) * 100vw;
+  }
+
+  @include vp-767 {
+    width: percentage(calc(260 / 270));
+    align-self: center;
+    padding-left: percentage(calc(26 / 270));
+    margin-top: 0;
+    font-size: calc(14 / 320) * 100vw;
+    line-height: calc(15 / 320) * 100vw;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 14px;
+    line-height: 15px;
   }
 }
 
 .feed-back__form input[type="checkbox"] + span {
-  position: absolute;
-  content: "";
-  width: percentage(calc(15 / 260));
-  height: 15px;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 2px;
-  border: 1px solid $color-default-white;
-  background-color: $color-deep-sky-blue;
+  min-width: 9px;
+  min-height: 9px;
 
   @include vp-1919 {
+    width: percentage(calc(15 / 260));
     height: calc(15 / 1920) * 100vw;
+    justify-content: space-around;
+  }
+
+  @include vp-1023 {
+    height: calc(15 / 770) * 100vw;
+    justify-content: flex-start;
+  }
+
+  @include vp-767 {
+    height: calc(15 / 320) * 100vw;
+  }
+
+  @media (max-width: 320px) {
+    height: 15px;
   }
 }
 
+.feed-back__form input[type="checkbox"] + span > svg {
+  @include vp-1919 {
+    margin: 0;
+    align-self: center;
+  }
+
+  @include vp-1023 {
+    align-self: flex-start;
+    margin-top: percentage(calc(4 / 13));
+    margin-left: percentage(calc(2 / 13));
+    width: percentage(calc(7 / 13));
+    height: percentage(calc(4 / 13));
+  }
+}
+
+.feed-back__form input[type="checkbox"]:checked + span > svg {
+  display: block;
+}

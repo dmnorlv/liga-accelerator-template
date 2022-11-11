@@ -1,0 +1,71 @@
+.form input[type="text"],
+.form input[type="tel"],
+.form textarea {
+  background-color: rgba(4, 20, 39, 0.15);
+  color: $color-default-white;
+  border: none;
+  border-radius: 3px;
+  font-family: $ff-pt-mono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px;
+  width: 100%;
+}
+
+.form textarea {
+  padding-top: 25px;
+}
+
+.form input[type="text"]::placeholder,
+.form input[type="tel"]::placeholder,
+.form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form button {
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: $color-black-pearl;
+  font-family: $ff-roboto-condensed;
+  color: $color-default-white;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 15px;
+  padding: 15px 25px;
+  width: 100%;
+}
+
+.form label {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  padding-left: 25px;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.form input[type="checkbox"] + span {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 2px;
+  border: 1px solid $color-default-white;
+  background-color: $color-deep-sky-blue;
+  display: flex;
+  overflow: hidden;
+}
+
+.form input[type="checkbox"] + span > svg {
+  margin-top: 4px;
+  margin-left: 2px;
+  display: none;
+}
+

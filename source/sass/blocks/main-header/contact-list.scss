@@ -19,7 +19,11 @@
 
 .contact-list__item {
   width: percentage(calc(225 / 480));
-  line-height: calc(20 / 1920) * 100vw;
+  line-height: 20px;
+
+  @include vp-1919 {
+    line-height: calc(20 / 1920) * 100vw;
+  }
 
   @include vp-1023 {
     width: percentage(calc(40 / 435));
@@ -27,6 +31,10 @@
 
   @include vp-767 {
     width: percentage(calc(40 / 160));
+  }
+
+  @media (max-width: 320px) {
+    line-height: 20px;
   }
 }
 
@@ -40,15 +48,16 @@
 .contact-list__link--phone {
   padding-left: percentage(calc(35 / 225));
   position: relative;
-  font-size: calc(16 / 1920) * 100vw;
+
+  @include vp-1919 {
+    font-size: calc(16 / 1920) * 100vw;
+  }
 
   @include vp-1023 {
+    font-size: 16px;
     padding: 0;
     display: block;
     padding-bottom: 100%;
-    // width: percentage(calc(40 / 100));
-    // min-width: 40px;
-    // min-height: 40px;
   }
 }
 

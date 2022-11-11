@@ -59,10 +59,10 @@
   &__content {
     position: relative;
 
-    width: 600px;
+    width: 500px;
     padding: 40px;
 
-    background-color: $color-default-white;
+    background-color: $color-deep-sky-blue;
 
     @include vp-767 {
       width: 100%;
@@ -72,8 +72,8 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 15px;
+    right: 15px;
     z-index: 1;
 
     width: 40px;
@@ -83,6 +83,13 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    & svg {
+      fill: $color-default-white;
+
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &--responsive {
@@ -116,4 +123,45 @@
 
     pointer-events: auto;
   }
+}
+
+.modal__title {
+  margin: 0;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  color: $color-default-white;
+
+  margin-bottom: 15px;
+}
+
+.modal__slogan {
+  margin: 0;
+  color: $color-default-white;
+
+  width: 400px;
+  margin-bottom: 40px;
+}
+
+.modal__form form {
+  display: grid;
+  row-gap: 20px;
+}
+
+.modal__form textarea {
+  margin-bottom: 5px;
+}
+
+.modal__form label {
+  justify-self: center;
+  width: 395px;
+}
+
+.modal__form input[type="checkbox"] + span {
+  top: 6px;
+}
+
+.modal__form input[type="checkbox"]:checked + span > svg {
+  display: block;
 }
