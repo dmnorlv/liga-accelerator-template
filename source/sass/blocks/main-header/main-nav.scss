@@ -23,14 +23,16 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-
-  width: percentage(160 / 785);
-  padding: percentage(10 / 785) percentage(15 / 785);
   border-radius: 3px;
   align-self: center;
   letter-spacing: 0.05em;
 
+  width: 160px;
+  padding: 10px;
+
   @include vp-1919 {
+    width: percentage(160 / 785);
+    padding: percentage(10 / 785) percentage(15 / 785);
     font-size: calc(14 / 1920) * 100vw;
     line-height: calc(16 / 1920) * 100vw;
   }
@@ -38,4 +40,17 @@
   @include vp-1023 {
     display: none;
   }
+}
+
+.main-nav__button:hover,
+.main-nav__button:focus {
+  cursor: pointer;
+  outline: none;
+  color: $color-deep-sky-blue;
+  border-color: $color-deep-sky-blue;
+}
+
+.main-nav__button:active {
+  color: rgba(0, 178, 255, 0.5);
+  border-color: rgba(0, 178, 255, 0.5);
 }

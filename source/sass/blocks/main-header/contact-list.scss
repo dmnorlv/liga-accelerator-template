@@ -44,6 +44,16 @@
   vertical-align: bottom;
 }
 
+.contact-list__link:hover,
+.contact-list__link:focus {
+  color: $color-deep-sky-blue;
+  outline: none;
+}
+
+.contact-list__link:active {
+  color: rgba(0, 178, 255, 0.5);
+}
+
 .contact-list__link--mail,
 .contact-list__link--phone {
   padding-left: percentage(calc(35 / 225));

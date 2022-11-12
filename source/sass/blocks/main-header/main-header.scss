@@ -73,3 +73,9 @@
   width: 100%;
   height: auto;
 }
+
+.main-header--fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
