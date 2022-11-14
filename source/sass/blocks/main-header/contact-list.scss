@@ -13,6 +13,14 @@
     align-self: center;
     width: 100%;
     justify-content: right;
+    column-gap: calc(20 / 770) * 100vw;
+  }
+
+  @include vp-767 {
+    column-gap: calc(20 / 320) * 100vw;
+  }
+
+  @media (max-width: 320px) {
     column-gap: 20px;
   }
 }

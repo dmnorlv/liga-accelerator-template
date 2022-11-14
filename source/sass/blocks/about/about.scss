@@ -107,8 +107,7 @@
   }
 }
 
-.about__additional-text p:last-child,
-.about__text p:last-child {
+.about__additional-text p:last-child {
   margin: 0;
 }
 
@@ -159,6 +158,17 @@
   display: block;
 }
 
+.about__button:hover,
+.about__button:focus {
+  color: $color-black-pearl;
+  border-color: $color-black-pearl;
+}
+
+.about__button:active {
+  color: rgba(4, 20, 39, 0.6);
+  border-color: rgba(4, 20, 39, 0.6);
+}
+
 .about__additional-text-js {
   display: none;
 }
@@ -168,4 +178,3 @@
     display: none;
   }
 }
-

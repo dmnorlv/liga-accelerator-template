@@ -1,13 +1,11 @@
 .major-block {
-  padding: 185px percentage(calc(725 / 1920))
-    280px percentage(calc(475 / 1920));
+  padding-top: 205px;
+  padding-bottom: 280px;
   background-color: $color-black-pearl;
   background-image: url("../img/main-background-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 95%;
-  position: relative;
-  z-index: -2;
   min-width: 320px;
 
   @media (min-resolution: 2dppx) {
@@ -15,13 +13,13 @@
   }
 
   @include vp-1919 {
-    padding-top: percentage(calc(185 / 1920));
+    padding-top: percentage(calc(205 / 1920));
     padding-bottom: percentage(calc(280 / 1920));
   }
 
   @include vp-1023 {
-    padding: percentage(calc(95 / 770)) percentage(calc(50 / 770))
-      percentage(calc(205 / 770));
+    padding-top: percentage(calc(95 / 770));
+    padding-bottom: percentage(calc(205 / 770));
     background-image: url("../img/main-background-tablet.jpg");
     background-position: 20.5% 100%;
 
@@ -31,8 +29,8 @@
   }
 
   @include vp-767 {
-    padding: percentage(calc(90 / 320)) percentage(calc(25 / 320))
-      percentage(calc(190 / 320));
+    padding-top: percentage(calc(90 / 320));
+    padding-bottom: percentage(calc(190 / 320));
     background-image: url("../img/main-background-mobile.jpg");
     background-position: 20.5% 95%;
 
@@ -42,29 +40,36 @@
   }
 
   @media (max-width: 320px) {
-    padding: 90px 25px 190px;
+    padding-top: 90px;
+    padding-bottom: 190px;
   }
 }
 
 .major-block__wrapper {
-  margin: 0 auto;
-  max-width: 720px;
-  min-width: 270px;
+  padding-left: 125px;
+
+  @include vp-1919 {
+    padding-left: percentage(calc(125 / 1920));
+  }
+
+  @include vp-1023 {
+    padding-left: 0;
+  }
 }
 
 .major-block__title {
   margin: 0;
   font-size: 80px;
-  line-height: 84px;
+  line-height: 90px;
   text-transform: uppercase;
   font-family: $ff-roboto-condensed;
   color: $color-alice-blue-2;
-  margin-bottom: percentage(calc(40 / 720));
+  margin-bottom: percentage(calc(40 / 1095));
   letter-spacing: 0.07em;
 
   @include vp-1919 {
     font-size: calc(80 / 1920) * 100vw;
-    line-height: calc(84 / 1920) * 100vw;
+    line-height: calc(90 / 1920) * 100vw;
   }
 
   @include vp-1023 {
@@ -90,8 +95,8 @@
   font-size: 22px;
   line-height: 34px;
   color: $color-alice-blue-2;
-  width: percentage(calc(685 / 720));
-  margin-bottom: percentage(calc(40 / 720));
+  width: percentage(calc(685 / 1095));
+  margin-bottom: percentage(calc(40 / 1095));
 
   @include vp-1919 {
     font-size: calc(22 / 1920) * 100vw;
@@ -118,7 +123,7 @@
 }
 
 .major-block__link {
-  width: percentage(calc(410 / 720));
+  width: percentage(calc(410 / 1095));
   display: block;
   font-weight: 700;
   font-size: 18px;
@@ -126,7 +131,7 @@
   color: $color-alice-blue-2;
   text-transform: uppercase;
   font-family: $ff-roboto-condensed;
-  padding: percentage(calc(15 / 720)) percentage(calc(25 / 720));
+  padding: percentage(calc(15 / 1095)) percentage(calc(25 / 1095));
   background-color: $color-deep-sky-blue;
   border-radius: 3px;
   text-align: center;
@@ -157,6 +162,16 @@
     font-size: 14px;
     line-height: 16px;
   }
+}
+
+.major-block__link:hover,
+.major-block__link:focus {
+  color: $color-black-pearl;
+  cursor: pointer;
+}
+
+.major-block__link:active {
+  opacity: 0.8;
 }
 
 .major-block__link-text {

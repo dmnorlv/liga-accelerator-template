@@ -2,9 +2,9 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Производство печатных плат и продажа электронных комплектующих">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon-svg.svg" type="image/svg+xml">
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="is-grid">
+<body>
   <div class="wrapper">
     <header class="header main-header">
       <h1 class="visually-hidden">Smart Device умные технологии</h1>
@@ -48,11 +48,11 @@
 
     </header>
     <main>
-      <section class="major-block">
-        <div class="major-block__wrapper">
+      <section class="major-block container">
+        <div class="content-wrapper major-block__wrapper">
           <h2 class="major-block__title">Печатные платы</h2>
           <p class="major-block__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="major-block__link" href="#form"><span class="major-block__link-text">Получить бесплатную
+          <a class="major-block__link" href="#feed-back"><span class="major-block__link-text">Получить бесплатную
               консультацию</span><span class="major-block__link-text-mobile">Бесплатная консультация</span></a>
         </div>
       </section>
@@ -117,9 +117,14 @@
       <section class="about">
         <div class="about__container container">
           <div class="about__wrapper content-wrapper">
+            <picture>
+              <source srcset="img/2022.webp 1x, img/2022-x2.webp 2x" type="image/webp">
             <img src="img/2022.png" srcset="img/2022-x2.png" width="150" height="320" alt="2022">
+            </picture>
             <div class="about__group">
               <h2 class="about__title">О компании</h2>
+              <!-- по умолчанию js не работает:
+                   js работает: about__additional-text-js about__text-mobile-js about__button-js -->
               <div class="about__text">
                 <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии
                   с
@@ -127,14 +132,14 @@
                 </p>
                 <p>
                   Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-                  <span class="about__text-mobile-js">
+                  <span>
                     Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
                     (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
                     Производители светотехники России.
-                    </>
+                  </span>
                 </p>
               </div>
-              <div class="about__additional-text about__additional-text-js">
+              <div class="about__additional-text">
                 <p>
                   Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых
                   продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и
@@ -147,7 +152,7 @@
                 </p>
               </div>
 
-              <button class="about__button about__button-js" type="button">Подробнее</button>
+              <button class="about__button" type="button">Подробнее</button>
             </div>
           </div>
         </div>
@@ -162,50 +167,59 @@
                 Smart Device</span>
             </h2>
             <ul class="products__list">
-              <li class="products__card products__card--production">
+              <li>
+                <a class="products__card products__card--production" aria-label="ссылка на продукт" href="#">
                 <h3 class="products__card-title">Производство печатных
                   плат</h3>
-                <a class="products__card-link link" aria-label="ссылка на продукт" href="#">
+                <div class="products__card-link link">
                   <svg class="products__card-icon" width="5" height="10">
                     <use xlink:href="img/sprite_auto.svg#arrow"></use>
                   </svg>
+                </div>
                 </a>
               </li>
-              <li class="products__card products__card--mounting">
+              <li>
+                <a class="products__card products__card--mounting" aria-label="ссылка на продукт" href="#">
                 <h3 class="products__card-title">Монтаж печатных
                   плат</h3>
-                <a class="products__card-link link" aria-label="ссылка на продукт" href="#">
+                <div class="products__card-link link">
                   <svg class="products__card-icon" width="5" height="10">
                     <use xlink:href="img/sprite_auto.svg#arrow"></use>
                   </svg>
-                </a>
+                </div>
+              </a>
               </li>
-              <li class="products__card products__card--lighting">
+              <li>
+                <a class="products__card products__card--lighting" aria-label="ссылка на продукт" href="#">
                 <h3 class="products__card-title">Комплектующие для светотехники</h3>
-                <a class="products__card-link link" aria-label="ссылка на продукт" href="#">
+                <div class="products__card-link link">
                   <svg class="products__card-icon" width="5" height="10">
                     <use xlink:href="img/sprite_auto.svg#arrow"></use>
                   </svg>
-                </a>
+                </div>
+              </a>
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="feed-back">
+      <section class="feed-back" id="feed-back">
         <div class="feed-back__container container">
           <div class="feed-back__wrapper content-wrapper">
+            <picture>
+            <source srcset="img/paper-airplane.webp 1x, img/paper-airplane-2x.webp 2x" type="image/webp">
             <img src="img/paper-airplane.png" srcset="img/paper-airplane-2x.png 2x" width="510" height="285"
               alt="Бумажный самолётик.">
+            </picture>
             <div class="feed-back__group">
               <h2 class="feed-back__title">Остались вопросы? Задайте их нам!</h2>
               <p class="feed-back__slogan">Мы проконсультируем Вас бесплатно</p>
               <div class="feed-back__form form">
                 <form action="https://echo.htmlacademy.ru/" method="post">
                   <input type="text" name="user-name" placeholder="Имя" required>
-                  <input type="tel" name="user-tel" placeholder="Телефон" required>
-                  <textarea name="user-question" rows="5" placeholder="Ваш вопрос" required></textarea>
+                  <input type="text" data-user-tel name="user-tel" placeholder="Телефон" required>
+                  <textarea name="user-question" rows="5" placeholder="Ваш вопрос"></textarea>
                   <button type="submit">Задать вопрос</button>
                   <label for="checkbox-accept-page">Я согласен на обработку персональных данных
                     <input type="checkbox" class="visually-hidden" id="checkbox-accept-page" name="user-accept" required>
@@ -329,9 +343,9 @@
           <h2 class="modal__title">Закажите звонок</h2>
           <p class="modal__slogan">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <div class="modal__form form">
-            <form action="" method="post">
-              <input type="text" name="user-name" placeholder="Имя" required>
-              <input type="tel" name="user-tel" placeholder="Телефон" required>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <input type="text" name="user-name" data-focus placeholder="Имя" required>
+              <input type="text" data-user-tel name="user-tel" placeholder="Телефон" required>
               <textarea name="user-question" rows="5" placeholder="Ваш вопрос" required></textarea>
               <button type="submit">Задать вопрос</button>
               <label for="checkbox-accept-modal">Я согласен на обработку персональных данных

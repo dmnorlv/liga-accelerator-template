@@ -1,7 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import './modules/accordeon/accordeon';
+import './accordeon';
 import './fix-header';
+import './about';
+import './form';
 
 // ---------------------------------
 
