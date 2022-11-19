@@ -62,7 +62,7 @@
 
   @include vp-1023 {
     min-height: (360 / 770) * 100vw;
-    padding: percentage(calc(39 / 320)) percentage(calc(29 / 320)) percentage(calc(30 / 320)) percentage(calc(44 / 320)); //ширина контента карточки 228px | карточка 320px
+    padding: percentage(calc(39 / 320)) percentage(calc(29 / 320)) percentage(calc(30 / 320)) percentage(calc(44 / 320));
   }
 
   @include vp-767 {
@@ -72,6 +72,16 @@
 
   @media (max-width: 320px) {
     min-height: 340px;
+  }
+}
+
+.advantages__card--short {
+  @include vp-767 {
+    min-height: calc(325 / 320) *100vw;
+  }
+
+  @media (max-width: 320px) {
+    min-height: 325px;
   }
 }
 
@@ -104,7 +114,7 @@
   }
 
   @include vp-767 {
-    width: percentage(calc(35 / 210));
+    width: percentage(calc(30 / 210));
   }
 }
 
@@ -131,15 +141,15 @@
   }
 
   @include vp-767 {
-    margin-bottom: percentage(calc(15 / 243));
-    margin-top: percentage(calc(20 / 243));
+    margin-bottom: percentage(calc(7 / 243));
+    margin-top: percentage(calc(15 / 243));
     font-size: calc(20 / 320) * 100vw;
-    line-height: calc(22 / 320) * 100vw;
+    line-height: calc(28 / 320) * 100vw;
   }
 
   @media (max-width: 320px) {
     font-size: 20px;
-    line-height: 22px;
+    line-height: 28px;
   }
 }
 

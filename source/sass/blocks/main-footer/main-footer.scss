@@ -8,7 +8,7 @@
   }
 
   @include vp-1023 {
-    padding: percentage(calc(50 / 770)) percentage(calc(50 / 770)) percentage(calc(50 / 770));
+    padding: percentage(calc(50 / 770)) percentage(calc(50 / 770)) percentage(calc(70 / 770));
   }
 
   @include vp-767 {
@@ -105,6 +105,17 @@
   @media (max-width: 320px) {
     font-size: 14px;
   }
+}
+
+.main-footer__link:hover,
+.main-footer__link:focus {
+  color: $color-deep-sky-blue;
+  cursor: pointer;
+  outline: none;
+}
+
+.main-footer__link:active {
+  opacity: 0.6;
 }
 
 .main-footer__group {

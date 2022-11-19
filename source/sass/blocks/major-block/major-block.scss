@@ -30,7 +30,7 @@
 
   @include vp-767 {
     padding-top: percentage(calc(90 / 320));
-    padding-bottom: percentage(calc(190 / 320));
+    padding-bottom: percentage(calc(186 / 320));
     background-image: url("../img/main-background-mobile.jpg");
     background-position: 20.5% 95%;
 
@@ -41,7 +41,7 @@
 
   @media (max-width: 320px) {
     padding-top: 90px;
-    padding-bottom: 190px;
+    padding-bottom: 186px;
   }
 }
 
@@ -49,7 +49,7 @@
   padding-left: 125px;
 
   @include vp-1919 {
-    padding-left: percentage(calc(125 / 1920));
+    padding-left: percentage(calc(125 / 1220));
   }
 
   @include vp-1023 {
@@ -75,18 +75,26 @@
   @include vp-1023 {
     font-size: calc(64 / 770) * 100vw;
     line-height: calc(75 / 770) * 100vw;
-    margin-bottom: percentage(calc(20 / 670));
+    margin-bottom: 0;
   }
 
   @include vp-767 {
     font-size: calc(36 / 320) * 100vw;
     line-height: calc(42 / 320) * 100vw;
-    margin-bottom: percentage(calc(20 / 270));
+    margin-bottom: percentage(calc(10 / 270));
   }
 
   @media (max-width: 320px) {
     font-size: 36px;
     line-height: 42px;
+  }
+}
+
+.major-block__title br {
+  display: none;
+
+  @include vp-767 {
+    display: inline;
   }
 }
 
@@ -106,14 +114,14 @@
   @include vp-1023 {
     font-size: calc(22 / 770) * 100vw;
     line-height: calc(34 / 770) * 100vw;
-    margin-bottom: percentage(calc(50 / 670));
+    margin-bottom: percentage(calc(60 / 670));
     width: 100%;
   }
 
   @include vp-767 {
     font-size: calc(14 / 320) * 100vw;
     line-height: calc(22 / 320) * 100vw;
-    margin-bottom: percentage(calc(50 / 270));
+    margin-bottom: percentage(calc(40 / 270));
   }
 
   @media (max-width: 320px) {
@@ -136,6 +144,7 @@
   border-radius: 3px;
   text-align: center;
   letter-spacing: 0.05em;
+  user-select: none;
 
   @include vp-1919 {
     font-size: calc(18 / 1920) * 100vw;
@@ -152,7 +161,7 @@
 
   @include vp-767 {
     width: 100%;
-    padding: percentage(calc(10 / 270)) percentage(calc(30 / 270));
+    padding: percentage(calc(15 / 270)) percentage(calc(30 / 270));
     font-size: calc(14 / 320) * 100vw;
     line-height: calc(16 / 320) * 100vw;
     margin-left: 0;

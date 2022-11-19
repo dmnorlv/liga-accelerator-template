@@ -33,15 +33,26 @@
             <ul class="main-nav__contact-list contact-list">
               <li class="contact-list__item">
                 <a class="contact-list__link contact-list__link--mail" aria-label="написать нам на почту info@sd.ru"
-                  href="mailto:info@sd.ru"><span>info@sd.ru</span></a>
+                  href="mailto:info@sd.ru">
+                  <svg class="contact-list__link-icon" width="21" height="20">
+                    <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+                  </svg>
+                  <span>info@sd.ru</span>
+                </a>
               </li>
               <li class="contact-list__item">
                 <a class="contact-list__link contact-list__link--phone"
-                  aria-label="позвонить нам по номеру +74950005252" href="tel:+74950005252"><span>+7 (495) 000 52
-                    52</span></a>
+                  aria-label="позвонить нам по номеру +74950005252" href="tel:+74950005252">
+                  <svg class="contact-list__link-icon" width="21" height="20">
+                    <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+                  </svg>
+                  <span>+7 (495) 000 52 52</span>
+                </a>
               </li>
             </ul>
+            <div class="main-nav__buttons-wrapper">
             <button class="main-nav__button" data-open-modal="feedback" type="button">Заказать звонок</button>
+            </div>
           </nav>
         </div>
       </div>
@@ -50,7 +61,7 @@
     <main>
       <section class="major-block container">
         <div class="content-wrapper major-block__wrapper">
-          <h2 class="major-block__title">Печатные платы</h2>
+          <h2 class="major-block__title">Печатные<br> платы</h2>
           <p class="major-block__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
           <a class="major-block__link" href="#feed-back"><span class="major-block__link-text">Получить бесплатную
               консультацию</span><span class="major-block__link-text-mobile">Бесплатная консультация</span></a>
@@ -86,7 +97,7 @@
                   Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.
                 </p>
               </li>
-              <li class="advantages__card">
+              <li class="advantages__card advantages__card--short">
                 <svg class="advantages__card-icon" width="35" height="35">
                   <use xlink:href="img/sprite_auto.svg#detective"></use>
                 </svg>
@@ -97,7 +108,7 @@
                   По желанию клиента мы обеспечиваем полную конфиденциальность.
                 </p>
               </li>
-              <li class="advantages__card">
+              <li class="advantages__card advantages__card--short">
                 <svg class="advantages__card-icon" width="35" height="35">
                   <use xlink:href="img/sprite_auto.svg#tag"></use>
                 </svg>
@@ -119,7 +130,7 @@
           <div class="about__wrapper content-wrapper">
             <picture>
               <source srcset="img/2022.webp 1x, img/2022-x2.webp 2x" type="image/webp">
-            <img src="img/2022.png" srcset="img/2022-x2.png" width="150" height="320" alt="2022">
+            <img class="about__picture" src="img/2022.png" srcset="img/2022-x2.png" width="150" height="320" alt="2022">
             </picture>
             <div class="about__group">
               <h2 class="about__title">О компании</h2>
@@ -169,7 +180,7 @@
             <ul class="products__list">
               <li>
                 <a class="products__card products__card--production" aria-label="ссылка на продукт" href="#">
-                <h3 class="products__card-title">Производство печатных
+                <h3 class="products__card-title">Производство<br> печатных
                   плат</h3>
                 <div class="products__card-link link">
                   <svg class="products__card-icon" width="5" height="10">
@@ -180,7 +191,7 @@
               </li>
               <li>
                 <a class="products__card products__card--mounting" aria-label="ссылка на продукт" href="#">
-                <h3 class="products__card-title">Монтаж печатных
+                <h3 class="products__card-title">Монтаж печатных<br>
                   плат</h3>
                 <div class="products__card-link link">
                   <svg class="products__card-icon" width="5" height="10">
@@ -191,7 +202,7 @@
               </li>
               <li>
                 <a class="products__card products__card--lighting" aria-label="ссылка на продукт" href="#">
-                <h3 class="products__card-title">Комплектующие для светотехники</h3>
+                <h3 class="products__card-title">Комплектующие<br> для светотехники</h3>
                 <div class="products__card-link link">
                   <svg class="products__card-icon" width="5" height="10">
                     <use xlink:href="img/sprite_auto.svg#arrow"></use>
@@ -217,9 +228,9 @@
               <p class="feed-back__slogan">Мы проконсультируем Вас бесплатно</p>
               <div class="feed-back__form form">
                 <form action="https://echo.htmlacademy.ru/" method="post">
-                  <input type="text" name="user-name" placeholder="Имя" required>
-                  <input type="text" data-user-tel name="user-tel" placeholder="Телефон" required>
-                  <textarea name="user-question" rows="5" placeholder="Ваш вопрос"></textarea>
+                  <input type="text" name="user-name" pattern="^[а-яА-яёЁ]+$|^[a-zA-z]+$" maxlength="20" placeholder="Имя" required>
+                  <input type="text" minlength="16" data-user-tel name="user-tel" placeholder="Телефон" required>
+                  <textarea maxlength="700" name="user-question" rows="6" placeholder="Ваш вопрос"></textarea>
                   <button type="submit">Задать вопрос</button>
                   <label for="checkbox-accept-page">Я согласен на обработку персональных данных
                     <input type="checkbox" class="visually-hidden" id="checkbox-accept-page" name="user-accept" required>
@@ -261,7 +272,7 @@
             </li>
             <li class="social-list__item">
               <a class="social-list__link" aria-label="группа в pinterest" href="#">
-                <svg class="social-list__icon" width="30" height="30">
+                <svg class="social-list__icon social-list__icon--pin" width="30" height="30">
                   <use xlink:href="img/sprite_auto.svg#social-pin"></use>
                 </svg>
               </a>
@@ -344,9 +355,9 @@
           <p class="modal__slogan">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <div class="modal__form form">
             <form action="https://echo.htmlacademy.ru/" method="post">
-              <input type="text" name="user-name" data-focus placeholder="Имя" required>
-              <input type="text" data-user-tel name="user-tel" placeholder="Телефон" required>
-              <textarea name="user-question" rows="5" placeholder="Ваш вопрос" required></textarea>
+              <input type="text" pattern="^[а-яА-яёЁ]+$|^[a-zA-z]+$" maxlength="20" name="user-name" data-focus placeholder="Имя" required>
+              <input type="text" minlength="16" data-user-tel name="user-tel" placeholder="Телефон" required>
+              <textarea name="user-question" rows="6" maxlength="700" placeholder="Ваш вопрос" required></textarea>
               <button type="submit">Задать вопрос</button>
               <label for="checkbox-accept-modal">Я согласен на обработку персональных данных
                 <input type="checkbox" class="visually-hidden" id="checkbox-accept-modal" name="user-accept" required>

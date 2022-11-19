@@ -125,6 +125,15 @@
   }
 }
 
+.modal__close-btn:hover,
+.modal__close-btn:focus {
+  background-color: $color-black-pearl;
+}
+
+.modal__close-btn:active {
+  opacity: 0.6;
+}
+
 .modal__title {
   margin: 0;
   font-family: $ff-roboto-condensed;
@@ -164,4 +173,46 @@
 
 .modal__form input[type="checkbox"]:checked + span > svg {
   display: block;
+}
+
+.modal__form button:hover,
+.modal__form button:focus {
+  background-color: $color-default-white;
+  color: $color-black-pearl;
+}
+
+.modal__form button:active {
+  opacity: 0.6;
+}
+
+.modal__form label:hover,
+.modal__form label:focus,
+.modal__form label:focus-within {
+  cursor: pointer;
+  color: $color-black-pearl;
+}
+
+.modal__form label:active {
+  opacity: 0.6;
+}
+
+.modal__form label:hover > span,
+.modal__form label:focus > span {
+  cursor: pointer;
+  border-color: $color-black-pearl;
+}
+
+.modal__form label > span svg {
+  fill: none;
+  stroke: $color-default-white;
+}
+
+.modal__form input[type="checkbox"]:focus + span {
+  border-color: $color-black-pearl;
+}
+
+.modal__form label:hover > span svg,
+.modal__form label:focus > span svg,
+.modal__form label:focus-within > span svg {
+  stroke: $color-black-pearl;
 }

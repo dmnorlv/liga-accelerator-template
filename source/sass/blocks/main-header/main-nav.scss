@@ -1,15 +1,34 @@
 .main-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: percentage(calc(480 / 785)) percentage(calc(160 / 785));
+  column-gap: 145px;
   width: percentage(calc(785 / 1160));
-  justify-content: space-between;
+
+  @include vp-1919 {
+    column-gap: calc(145 / 1920) * 100vw;
+  }
 
   @include vp-1023 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: percentage(calc(435 / 650));
-    align-self: flex-start;
+    align-self: center;
   }
 
   @include vp-767 {
     width: percentage(calc(160 / 259));
+    margin-right: percentage(calc(5 / 160));
+  }
+}
+
+.main-nav__buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+
+  @include vp-1919 {
+    row-gap: calc(10 / 1920) * 100vw;
   }
 }
 
@@ -26,13 +45,12 @@
   border-radius: 3px;
   align-self: center;
   letter-spacing: 0.05em;
-
-  width: 160px;
+  user-select: none;
+  width: 100%;
   padding: 10px;
 
   @include vp-1919 {
-    width: percentage(160 / 785);
-    padding: percentage(10 / 785) percentage(15 / 785);
+    padding: percentage(10 / 160);
     font-size: calc(14 / 1920) * 100vw;
     line-height: calc(16 / 1920) * 100vw;
   }

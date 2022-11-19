@@ -36,11 +36,30 @@
   display: flex;
 }
 
+.social-list__link:active {
+  opacity: 0.6;
+}
+
 .social-list__item {
   width: percentage(40 / 150);
 }
 
 .social-list__icon {
+  fill: #f8fdff;
   width: 100%;
   height: auto;
+  border-radius: 50%;
+}
+
+.social-list__icon--pin {
+  fill: #041827;
+}
+
+.social-list__link:hover .social-list__icon {
+  background-color: $color-deep-sky-blue;
+}
+
+.social-list__link:hover .social-list__icon--pin {
+  background-color: $color-deep-sky-blue;
+  fill: $color-deep-sky-blue;
 }

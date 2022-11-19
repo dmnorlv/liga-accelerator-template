@@ -9,8 +9,8 @@
   }
 
   @include vp-1023 {
-    padding-top: percentage(calc(60 / 770));
-    padding-bottom: percentage(calc(175 / 770));
+    padding-top: percentage(calc(55 / 770));
+    padding-bottom: percentage(calc(75 / 770));
   }
 
   @include vp-767 {
@@ -41,13 +41,13 @@
   @include vp-1023 {
     font-size: calc(36 / 770) * 100vw;
     line-height: calc(51 / 770) * 100vw;
-    margin-bottom: percentage(calc(50 / 670));
+    margin-bottom: percentage(calc(35 / 670));
   }
 
   @include vp-767 {
     font-size: calc(28 / 320) * 100vw;
     line-height: calc(39 / 320) * 100vw;
-    margin-bottom: percentage(calc(40 / 270));
+    margin-bottom: percentage(calc(30 / 270));
   }
 
   @media (max-width: 320px) {
@@ -87,7 +87,7 @@
     gap: calc(30 / 770) * 100vw;
   }
 
-  @include vp-1023 {
+  @include vp-767 {
     gap: calc(30 / 320) * 100vw;
   }
 
@@ -120,6 +120,15 @@
   @media (max-width: 320px) {
     min-height: 250px;
   }
+}
+
+.products__card:hover h3,
+.products__card:focus h3 {
+  color: $color-deep-sky-blue;
+}
+
+.products__card:active {
+  opacity: 0.6;
 }
 
 .products__card--production {
@@ -170,6 +179,12 @@
   }
 }
 
+.products__card--mounting .products__card-title br {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
 .products__card--lighting {
   background-image: url("../img/product-card-desktop-3.jpg");
 
@@ -205,7 +220,6 @@
   margin-top: percentage(calc(50 / 350));
   margin-left: percentage(calc(40 / 350));
   align-self: flex-start;
-  width: percentage(calc(160 / 350));
 
   @include vp-1919 {
     font-size: calc(20 / 1920) * 100vw;
@@ -223,7 +237,7 @@
   @include vp-767 {
     font-size: calc(18 / 320) * 100vw;
     line-height: calc(30 / 320) * 100vw;
-    margin-top: percentage(calc(30 / 270));
+    margin-top: percentage(calc(25 / 270));
     margin-left: percentage(calc(30 / 270));
     width: percentage(calc(135 / 270));
   }
@@ -239,10 +253,10 @@
   padding: percentage(calc(25 / 350)) percentage(calc(27.5 / 350));
 
   @include vp-1023 {
-    padding: percentage(calc(25 / 670)) percentage(calc(27.5 / 670));
+    padding: 3.76% 4%;
   }
 
-  @include vp-1023 {
+  @include vp-767 {
     padding: percentage(calc(15 / 270)) percentage(calc(17.5 / 270));
   }
 }
