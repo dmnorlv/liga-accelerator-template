@@ -1,4 +1,4 @@
-.about__container {
+.about {
   padding-top: 60px;
   padding-bottom: 100px;
 
@@ -36,9 +36,13 @@
   }
 }
 
-.about__picture {
+.about__wrapper img {
   width: 100%;
   height: auto;
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .about__group {
@@ -46,7 +50,7 @@
   grid-column-end: 4;
 }
 
-.about__title {
+.about__group h2 {
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 36px;
@@ -78,12 +82,6 @@
   }
 }
 
-.about__wrapper img {
-  @include vp-767 {
-    display: none;
-  }
-}
-
 .about__group p {
   margin: 0;
   margin-bottom: 22px;
@@ -111,14 +109,6 @@
     line-height: 19px;
   }
 }
-
-// .about__additional-text p:last-child {
-//   margin: 0;
-
-//   @include vp-1023 {
-//     margin-bottom: percentage(calc(22 / 493.5));
-//   }
-// }
 
 .about__button {
   border: 1px solid $color-deep-sky-blue;

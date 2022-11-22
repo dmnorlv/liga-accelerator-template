@@ -20,7 +20,7 @@
   }
 }
 
-.main-footer__title {
+.main-footer__heading-container h3 {
   color: $color-default-white;
   font-family: $ff-roboto-condensed;
   font-size: 15px;
@@ -56,10 +56,7 @@
   grid-column-end: 3;
 }
 
-.main-footer__container {
-  max-width: 1220px;
-  min-width: 270px;
-  margin: 0 auto;
+.main-footer__wrapper {
   display: flex;
 
   @include vp-1023 {
@@ -151,14 +148,6 @@
   @include vp-1919 {
     column-gap: calc(30 / 1920) * 100vw;
   }
-
-  // @include vp-1439 {
-  //   column-gap: 20px;
-  // }
-
-  // @include vp-1279 {
-  //   column-gap: 16px;
-  // }
 
   @include vp-1023 {
     align-self: stretch;

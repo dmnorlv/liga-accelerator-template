@@ -1,4 +1,4 @@
-.feed-back__container {
+.feed-back {
   background-color: $color-deep-sky-blue;
   position: relative;
   padding-top: 170px;
@@ -25,7 +25,7 @@
   }
 }
 
-.feed-back__container::after {
+.feed-back::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -72,7 +72,7 @@
   }
 }
 
-.feed-back__title {
+.feed-back__group h2 {
   margin: 0;
   color: $color-default-white;
   font-family: $ff-roboto-condensed;
@@ -104,7 +104,7 @@
   }
 }
 
-.feed-back__slogan {
+.feed-back__group p {
   margin: 0;
   color: $color-default-white;
   margin-bottom: percentage(calc(35 / 580));
@@ -307,14 +307,27 @@
   border-color: $color-black-pearl;
 }
 
-.feed-back__form label > span svg {
+.feed-back__form svg {
   fill: none;
   stroke: $color-default-white;
+
+  @include vp-1919 {
+    margin: 0;
+    align-self: center;
+  }
+
+  @include vp-1023 {
+    align-self: flex-start;
+    margin-top: percentage(calc(4 / 13));
+    margin-left: percentage(calc(2 / 13));
+    width: percentage(calc(7 / 13));
+    height: percentage(calc(4 / 13));
+  }
 }
 
-.feed-back__form label:hover > span svg,
-.feed-back__form label:focus > span svg,
-.feed-back__form label:focus-within > span svg {
+.feed-back__form label:hover svg,
+.feed-back__form label:focus svg,
+.feed-back__form label:focus-within svg {
   stroke: $color-black-pearl;
 }
 
@@ -344,21 +357,6 @@
 
 .feed-back__form input[type="checkbox"]:focus + span {
   border-color: $color-black-pearl;
-}
-
-.feed-back__form input[type="checkbox"] + span > svg {
-  @include vp-1919 {
-    margin: 0;
-    align-self: center;
-  }
-
-  @include vp-1023 {
-    align-self: flex-start;
-    margin-top: percentage(calc(4 / 13));
-    margin-left: percentage(calc(2 / 13));
-    width: percentage(calc(7 / 13));
-    height: percentage(calc(4 / 13));
-  }
 }
 
 .feed-back__form input[type="checkbox"]:checked + span > svg {

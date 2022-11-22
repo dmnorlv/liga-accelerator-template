@@ -202,7 +202,7 @@
   border-color: $color-black-pearl;
 }
 
-.modal__form label > span svg {
+.modal__form svg {
   fill: none;
   stroke: $color-default-white;
 }
@@ -211,8 +211,8 @@
   border-color: $color-black-pearl;
 }
 
-.modal__form label:hover > span svg,
-.modal__form label:focus > span svg,
-.modal__form label:focus-within > span svg {
+.modal__form label:hover svg,
+.modal__form label:focus svg,
+.modal__form label:focus-within svg {
   stroke: $color-black-pearl;
 }

@@ -1,10 +1,11 @@
+// .main-header {
+//   position: relative;
+//   z-index: 5;
+// }
+
 .main-header {
   position: relative;
   z-index: 5;
-}
-
-.main-header__wrapper {
-  position: relative;
   padding-top: 30px;
   padding-bottom: 15px;
   padding-left: percentage(calc(350 / 1920));
@@ -32,7 +33,7 @@
   }
 }
 
-.main-header__wrapper::after {
+.main-header::after {
   position: absolute;
   content: "";
   width: 100%;
