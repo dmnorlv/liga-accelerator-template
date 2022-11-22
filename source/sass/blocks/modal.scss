@@ -134,7 +134,7 @@
   opacity: 0.6;
 }
 
-.modal__title {
+.modal__content h2 {
   margin: 0;
   font-family: $ff-roboto-condensed;
   font-weight: 400;
@@ -145,7 +145,7 @@
   margin-bottom: 15px;
 }
 
-.modal__slogan {
+.modal__content p {
   margin: 0;
   color: $color-default-white;
 
