@@ -10,7 +10,7 @@
   width: percentage(calc(150 / 215));
 
   @include vp-1919 {
-    column-gap: calc(15 / 1920) * 100vw;
+    column-gap: calc(14 / 1920) * 100vw;
   }
 
   @include vp-1023 {
@@ -31,6 +31,10 @@
   }
 }
 
+.social-list__item {
+  width: percentage(40 / 150);
+}
+
 .social-list__link {
   padding: percentage(5 / 40);
   display: flex;
@@ -38,10 +42,6 @@
 
 .social-list__link:active {
   opacity: 0.6;
-}
-
-.social-list__item {
-  width: percentage(40 / 150);
 }
 
 .social-list__icon {

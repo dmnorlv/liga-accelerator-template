@@ -1360,6 +1360,10 @@ button,
   width: 69.7674418605%;
 }
 
+.social-list__item {
+  width: 26.6666666667%;
+}
+
 .social-list__link {
   padding: 12.5%;
   display: -webkit-box;
@@ -1369,10 +1373,6 @@ button,
 
 .social-list__link:active {
   opacity: 0.6;
-}
-
-.social-list__item {
-  width: 26.6666666667%;
 }
 
 .social-list__icon {
@@ -1471,7 +1471,7 @@ button,
   color: #f2f5f7;
   text-transform: uppercase;
   font-family: "Roboto Condensed", "Arial", sans-serif;
-  padding: 1.3698630137% 2.2831050228%;
+  padding: 1.3698630137% 1.3698630137%;
   background-color: #00b2ff;
   border-radius: 3px;
   text-align: center;
@@ -1988,9 +1988,9 @@ button,
   }
 
   .social-list {
-    -webkit-column-gap: 0.78125vw;
-    -moz-column-gap: 0.78125vw;
-    column-gap: 0.78125vw;
+    -webkit-column-gap: 0.7291666667vw;
+    -moz-column-gap: 0.7291666667vw;
+    column-gap: 0.7291666667vw;
   }
 
   .contacts-list__item address {
