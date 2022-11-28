@@ -1580,7 +1580,7 @@ button,
   content: "";
   width: 100%;
   height: 100%;
-  background-color: #003a53;
+  background-color: rgba(4, 24, 39, 0.5);
   -webkit-clip-path: polygon(0% 100%, 50.5% 0%, 0% 0%);
   clip-path: polygon(0% 100%, 50.5% 0%, 0% 0%);
   z-index: 1;
