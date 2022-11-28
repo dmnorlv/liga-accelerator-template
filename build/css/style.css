@@ -951,6 +951,9 @@ button,
 }
 
 .modal__form label {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
   -ms-grid-column-align: center;
   justify-self: center;
   width: 395px;
@@ -962,6 +965,12 @@ button,
 
 .modal__form input[type=checkbox]:checked + span > svg {
   display: block;
+}
+
+.modal__form button {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .modal__form button:hover,
@@ -1648,6 +1657,9 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .feed-back__form button:hover,
@@ -1662,6 +1674,9 @@ button,
 
 .feed-back__form label {
   width: 94.5454545455%;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
   margin-left: 3.6363636364%;
   margin-top: 5.4545454545%;
   -ms-flex-item-align: start;

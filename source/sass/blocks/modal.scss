@@ -163,6 +163,7 @@
 }
 
 .modal__form label {
+  order: 2;
   justify-self: center;
   width: 395px;
 }
@@ -173,6 +174,10 @@
 
 .modal__form input[type="checkbox"]:checked + span > svg {
   display: block;
+}
+
+.modal__form button {
+  order: 1;
 }
 
 .modal__form button:hover,

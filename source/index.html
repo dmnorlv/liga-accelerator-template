@@ -219,7 +219,6 @@
                   <input type="text" name="user-name" pattern="^[а-яА-яёЁ- ]+$|^[a-zA-z- ]+$" maxlength="20" placeholder="Имя" required>
                   <input type="text" minlength="16" data-user-tel name="user-tel" placeholder="Телефон" required>
                   <textarea maxlength="700" name="user-question" rows="6" placeholder="Ваш вопрос"></textarea>
-                  <button type="submit">Задать вопрос</button>
                   <label for="checkbox-accept-page">Я согласен на обработку персональных данных
                     <input type="checkbox" id="checkbox-accept-page" name="user-accept" required>
                     <span>
@@ -228,6 +227,7 @@
                       </svg>
                     </span>
                   </label>
+                  <button type="submit">Задать вопрос</button>
                 </form>
               </div>
             </div>
@@ -336,7 +336,6 @@
               <input type="text" pattern="^[а-яА-яёЁ]+$|^[a-zA-z]+$" maxlength="20" name="user-name" data-focus placeholder="Имя" required>
               <input type="text" minlength="16" data-user-tel name="user-tel" placeholder="Телефон" required>
               <textarea name="user-question" rows="6" maxlength="700" placeholder="Ваш вопрос" required></textarea>
-              <button type="submit">Задать вопрос</button>
               <label for="checkbox-accept-modal">Я согласен на обработку персональных данных
                 <input type="checkbox" id="checkbox-accept-modal" name="user-accept" required>
                 <span>
@@ -345,6 +344,7 @@
                   </svg>
                 </span>
               </label>
+              <button type="submit">Задать вопрос</button>
             </form>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>

@@ -215,6 +215,7 @@
   width: percentage(calc(265 / 275));
   align-self: flex-start;
   user-select: none;
+  order: 1;
 
   @include vp-1919 {
     padding: percentage(calc(15 / 275)) percentage(calc(25 / 275));
@@ -255,6 +256,7 @@
 
 .feed-back__form label {
   width: percentage(calc(260 / 275));
+  order: 2;
 
   margin-left: percentage(calc(10 / 275));
   margin-top: percentage(calc(15 / 275));
