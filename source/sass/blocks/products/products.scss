@@ -134,7 +134,7 @@
 .products__card--production {
   background-image: url("../img/product-card-desktop-1.jpg");
 
-  @media (min-resolution: 2dppx) {
+  @media (min-resolution: 2dppx) and (min-width: 1024px) {
     background-image: url("../img/product-card-desktop-1-2x.jpg");
   }
 
@@ -150,7 +150,7 @@
     background-image: url("../img/product-card-mobile-1.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/product-card-mobile-1-2x.jpg");
+      background-image: url("../img/product-card-mobile-1-2x.webp");
     }
   }
 }
@@ -158,7 +158,7 @@
 .products__card--mounting {
   background-image: url("../img/product-card-desktop-2.jpg");
 
-  @media (min-resolution: 2dppx) {
+  @media (min-resolution: 2dppx) and (min-width: 1024px) {
     background-image: url("../img/product-card-desktop-2-2x.jpg");
   }
 
@@ -174,7 +174,7 @@
     background-image: url("../img/product-card-mobile-2.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/product-card-mobile-2-2x.jpg");
+      background-image: url("../img/product-card-mobile-2-2x.webp");
     }
   }
 }
@@ -188,7 +188,7 @@
 .products__card--lighting {
   background-image: url("../img/product-card-desktop-3.jpg");
 
-  @media (min-resolution: 2dppx) {
+  @media (min-resolution: 2dppx) and (min-width: 1024px) {
     background-image: url("../img/product-card-desktop-3-2x.jpg");
   }
 
@@ -204,7 +204,7 @@
     background-image: url("../img/product-card-mobile-3.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/product-card-mobile-3-2x.jpg");
+      background-image: url("../img/product-card-mobile-3-2x.webp");
     }
   }
 }
