@@ -7,18 +7,26 @@
   justify-content: space-between;
   align-items: center;
   row-gap: 10px;
+  flex: 1 1 auto;
+  max-width: 480px;
+  margin-left: auto;
+  padding-left: 7px;
+  padding-right: 13px;
 
   @include vp-1919 {
-    row-gap: calc(10 / 1920) * 100vw;
+    // row-gap: calc(10 / 1920) * 100vw;
   }
 
   @include vp-1023 {
-    align-self: center;
-    width: 100%;
-    justify-content: right;
-    column-gap: calc(40 / 770) * 100vw;
-    margin-right: percentage(calc(10 / 435));
-    margin-bottom: percentage(calc(15 / 435));
+    max-width: none;
+    padding: 0;
+    margin-left: auto;
+    // align-self: center;
+    // width: 100%;
+    // justify-content: right;
+    // column-gap: calc(40 / 770) * 100vw;
+    // margin-right: percentage(calc(10 / 435));
+    // margin-bottom: percentage(calc(15 / 435));
   }
 
   @include vp-767 {
@@ -31,36 +39,42 @@
 }
 
 .contact-list__item {
-  width: percentage(calc(225 / 480));
-  line-height: 20px;
+  // width: percentage(calc(225 / 480));
+  line-height: 21px;
+  // // min-width: ;
+  // flex: 0 0 auto;
 
   @include vp-1919 {
-    line-height: calc(20 / 1920) * 100vw;
+    // line-height: calc(20 / 1920) * 100vw;
   }
 
   @include vp-1023 {
-    width: percentage(calc(20 / 425));
+    // width: percentage(calc(20 / 425));
   }
 
   @include vp-767 {
-    width: percentage(calc(20 / 160));
+    // width: percentage(calc(20 / 160));
   }
 
-  @media (max-width: 320px) {
-    line-height: 20px;
-  }
+  // @media (max-width: 320px) {
+  //   line-height: 20px;
+  // }
 }
 
 .contact-list__link {
   color: #f2f5f6;
-  display: grid;
-  align-items: center;
-  grid-template-columns: percentage(calc(21 / 225)) percentage(calc(189 / 225));
-  column-gap: 15px;
+  display: flex;
+
+  // display: grid;
+  // align-items: center;
+  // grid-template-columns: percentage(calc(21 / 225)) percentage(calc(189 / 225));
+  // column-gap: 15px;
+
+  font-size: 16px;
 
   @include vp-1919 {
     column-gap: calc(15 / 1920) * 100vw;
-    font-size: calc(16 / 1920) * 100vw;
+    // font-size: calc(16 / 1920) * 100vw;
   }
 
   @include vp-1023 {
@@ -71,8 +85,8 @@
 }
 
 .contact-list__link-icon {
-  width: 100%;
-  height: auto;
+  // width: 100%;
+  // height: auto;
   fill: #00b2ff;
 }
 
@@ -95,7 +109,10 @@
 .contact-list__item span {
   display: flex;
   flex-wrap: wrap;
+
   word-break: break-all;
+
+  margin-left: 15px;
 }
 
 .contact-list__link--mail span,

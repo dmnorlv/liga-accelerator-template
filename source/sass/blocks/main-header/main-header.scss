@@ -3,27 +3,27 @@
   z-index: 5;
   padding-top: 30px;
   padding-bottom: 15px;
-  padding-left: percentage(calc(350 / 1920));
-  padding-right: percentage(calc(410 / 1920));
+  // padding-left: percentage(calc(350 / 1920));
+  // padding-right: percentage(calc(410 / 1920));
   background-color: $color-black-pearl;
 
   @include vp-1919 {
-    padding-top: percentage(calc(30 / 1920));
-    padding-bottom: percentage(calc(15 / 1920));
+    // padding-top: percentage(calc(30 / 1920));
+    // padding-bottom: percentage(calc(15 / 1920));
   }
 
   @include vp-1023 {
-    padding-left: percentage(calc(50 / 770));
-    padding-right: percentage(calc(70 / 770));
-    padding-top: percentage(calc(20 / 770));
-    padding-bottom: percentage(calc(10 / 770));
+    // padding-left: percentage(calc(50 / 770));
+    // padding-right: percentage(calc(70 / 770));
+    // padding-top: percentage(calc(20 / 770));
+    // padding-bottom: percentage(calc(10 / 770));
   }
 
   @include vp-767 {
-    padding-left: percentage(calc(26 / 320));
-    padding-right: percentage(calc(35 / 320));
-    padding-top: percentage(calc(15 / 320));
-    padding-bottom: percentage(calc(10 / 320));
+    // padding-left: percentage(calc(26 / 320));
+    // padding-right: percentage(calc(35 / 320));
+    // padding-top: percentage(calc(15 / 320));
+    // padding-bottom: percentage(calc(10 / 320));
     min-width: 320px;
   }
 }
@@ -48,20 +48,28 @@
 }
 
 .main-header__container {
-  margin: 0 auto;
-  max-width: 1160px;
-  min-width: 259px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  padding-right: 60px;
+
+  @include vp-1919 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include vp-1023 {
+    padding: 0;
+  }
 }
 
 .main-header__logo {
   display: block;
-  width: percentage(calc(215 / 1160));
+  flex: 0 0 auto;
+  // width: percentage(calc(215 / 1160));
 
   @include vp-1023 {
-    width: percentage(calc(215 / 650));
+    // width: percentage(calc(215 / 650));
   }
 
   @include vp-767 {
