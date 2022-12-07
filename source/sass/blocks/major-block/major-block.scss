@@ -12,14 +12,9 @@
     background-image: url("../img/main-background-desktop-2x.jpg");
   }
 
-  @include vp-1919 {
-    padding-top: percentage(calc(205 / 1920));
-    padding-bottom: percentage(calc(280 / 1920));
-  }
-
   @include vp-1023 {
-    padding-top: percentage(calc(95 / 770));
-    padding-bottom: percentage(calc(205 / 770));
+    padding-top: 90px;
+    padding-bottom: 205px;
     background-image: url("../img/main-background-tablet.jpg");
     background-position: 20.5% 100%;
 
@@ -29,8 +24,8 @@
   }
 
   @include vp-767 {
-    padding-top: percentage(calc(90 / 320));
-    padding-bottom: percentage(calc(186 / 320));
+    padding-top: 90px;
+    padding-bottom: 190px;
     background-image: url("../img/main-background-mobile.jpg");
     background-position: 20.5% 95%;
 
@@ -38,22 +33,19 @@
       background-image: url("../img/main-background-mobile-2x.webp");
     }
   }
-
-  @media (max-width: 320px) {
-    padding-top: 90px;
-    padding-bottom: 186px;
-  }
 }
 
 .major-block__wrapper {
   padding-left: 125px;
 
-  @include vp-1919 {
-    padding-left: percentage(calc(125 / 1220));
+  @include vp-1023 {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
-  @include vp-1023 {
-    padding-left: 0;
+  @include vp-767 {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 
@@ -64,37 +56,22 @@
   text-transform: uppercase;
   font-family: $ff-roboto-condensed;
   color: $color-alice-blue-2;
-  margin-bottom: percentage(calc(40 / 1095));
+  margin-bottom: 37px;
   letter-spacing: 0.07em;
 
-  @include vp-1919 {
-    font-size: calc(80 / 1920) * 100vw;
-    line-height: calc(90 / 1920) * 100vw;
-  }
-
   @include vp-1023 {
-    font-size: calc(64 / 770) * 100vw;
-    line-height: calc(75 / 770) * 100vw;
+    font-size: 64px;
+    line-height: 75px;
     margin-bottom: 0;
   }
 
   @include vp-767 {
-    font-size: calc(36 / 320) * 100vw;
-    line-height: calc(42 / 320) * 100vw;
-    margin-bottom: percentage(calc(10 / 270));
-  }
-
-  @media (max-width: 320px) {
+    max-width: 410px;
+    width: 100%;
     font-size: 36px;
     line-height: 42px;
-  }
-}
-
-.major-block__wrapper br {
-  display: none;
-
-  @include vp-767 {
-    display: inline;
+    margin: 0 auto;
+    margin-bottom: 7px;
   }
 }
 
@@ -103,35 +80,26 @@
   font-size: 22px;
   line-height: 34px;
   color: $color-alice-blue-2;
-  width: percentage(calc(685 / 1095));
-  margin-bottom: percentage(calc(40 / 1095));
-
-  @include vp-1919 {
-    font-size: calc(22 / 1920) * 100vw;
-    line-height: calc(34 / 1920) * 100vw;
-  }
+  width: 685px;
+  margin-bottom: 45px;
 
   @include vp-1023 {
-    font-size: calc(22 / 770) * 100vw;
-    line-height: calc(34 / 770) * 100vw;
-    margin-bottom: percentage(calc(60 / 670));
+    margin-bottom: 59px;
     width: 100%;
   }
 
   @include vp-767 {
-    font-size: calc(14 / 320) * 100vw;
-    line-height: calc(22 / 320) * 100vw;
-    margin-bottom: percentage(calc(40 / 270));
-  }
-
-  @media (max-width: 320px) {
+    max-width: 410px;
+    width: 100%;
     font-size: 14px;
     line-height: 22px;
+    margin: 0 auto;
+    margin-bottom: 45px;
   }
 }
 
 .major-block__link {
-  width: percentage(calc(410 / 1095));
+  width: 410px;
   display: block;
   font-weight: 700;
   font-size: 18px;
@@ -139,37 +107,30 @@
   color: $color-alice-blue-2;
   text-transform: uppercase;
   font-family: $ff-roboto-condensed;
-  padding: percentage(calc(15 / 1095)) percentage(calc(15 / 1095));
+  padding: 15px;
+  padding-bottom: 18px;
   background-color: $color-deep-sky-blue;
   border-radius: 3px;
   text-align: center;
   letter-spacing: 0.05em;
   user-select: none;
 
-  @include vp-1919 {
-    font-size: calc(18 / 1920) * 100vw;
-    line-height: calc(21 / 1920) * 100vw;
-  }
-
   @include vp-1023 {
-    width: percentage(calc(410 / 670));
-    padding: percentage(calc(15 / 670)) percentage(calc(25 / 670));
-    font-size: calc(18 / 770) * 100vw;
-    line-height: calc(21 / 770) * 100vw;
-    margin-left: percentage(calc(45 / 670));
+    width: 410px;
+    padding: 15px 25px;
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: 45px;
   }
 
   @include vp-767 {
+    max-width: 410px;
     width: 100%;
-    padding: percentage(calc(15 / 270)) percentage(calc(30 / 270));
-    font-size: calc(14 / 320) * 100vw;
-    line-height: calc(16 / 320) * 100vw;
-    margin-left: 0;
-  }
-
-  @media (max-width: 320px) {
+    margin: 0 auto;
+    padding: 13px 30px;
     font-size: 14px;
     line-height: 16px;
+    padding-bottom: 10px;
   }
 }
 
