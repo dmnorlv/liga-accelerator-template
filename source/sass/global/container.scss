@@ -1,3 +1,18 @@
 .container {
   min-width: 320px;
+
+  @include vp-1919 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include vp-1023 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include vp-767 {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
 }

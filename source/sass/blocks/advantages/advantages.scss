@@ -2,22 +2,12 @@
   padding-top: 120px;
   padding-bottom: 60px;
 
-  @include vp-1919 {
-    padding-top: percentage(calc(120 / 1920));
-    padding-bottom: percentage(calc(60 / 1920));
-  }
-
   @include vp-1023 {
-    padding-top: percentage(calc(80 / 770));
-    padding-bottom: percentage(calc(40 / 770));
+    padding-top: 80px;
+    padding-bottom: 40px;
   }
 
   @include vp-767 {
-    padding-top: percentage(calc(50 / 320));
-    padding-bottom: percentage(calc(25 / 320));
-  }
-
-  @media (max-width: 320px) {
     padding-top: 50px;
     padding-bottom: 25px;
   }
@@ -56,31 +46,19 @@
   min-height: 300px;
   border: 1px solid $color-whisper;
 
-  @include vp-1919 {
-    min-height: calc(300 / 1920) * 100vw;
-  }
-
   @include vp-1023 {
-    min-height: (360 / 770) * 100vw;
+    min-height: 360px;
     padding: percentage(calc(39 / 320)) percentage(calc(29 / 320)) percentage(calc(30 / 320)) percentage(calc(44 / 320));
   }
 
   @include vp-767 {
-    min-height: (340 / 320) * 100vw;
-    padding: percentage(calc(29 / 270));
-  }
-
-  @media (max-width: 320px) {
     min-height: 340px;
+    padding: 30px;
   }
 }
 
 .advantages__card--short {
   @include vp-767 {
-    min-height: calc(325 / 320) *100vw;
-  }
-
-  @media (max-width: 320px) {
     min-height: 325px;
   }
 }
@@ -99,22 +77,17 @@
   }
 
   @include vp-767 {
-    width: percentage(calc(5 / 270));
+    width: 5px;
   }
 }
 
 .advantages__card-icon {
   stroke: $color-deep-sky-blue;
   fill: $color-deep-sky-blue;
-  width: percentage(calc(35 / 505));
-  height: auto;
-
-  @include vp-1023 {
-    width: percentage(calc(35 / 245));
-  }
 
   @include vp-767 {
-    width: percentage(calc(30 / 210));
+    width: 30px;
+    height: auto;
   }
 }
 
@@ -124,30 +97,18 @@
   font-weight: 400;
   margin: 0;
   font-size: 24px;
-  line-height: 25px;
-  margin-bottom: percentage(calc(15 / 505));
-  margin-top: percentage(calc(20 / 505));
-
-  @include vp-1919 {
-    font-size: calc(24 / 1920) * 100vw;
-    line-height: calc(25 / 1920) * 100vw;
-  }
+  line-height: 29px;
+  margin-bottom: 18px;
+  margin-top: 20px;
 
   @include vp-1023 {
-    margin-bottom: percentage(calc(15 / 243));
-    margin-top: percentage(calc(20 / 243));
-    font-size: calc(24 / 770) * 100vw;
-    line-height: calc(25 / 770) * 100vw;
+    margin-bottom: 10px;
+    margin-top: 15px;
   }
 
   @include vp-767 {
-    margin-bottom: percentage(calc(7 / 243));
-    margin-top: percentage(calc(15 / 243));
-    font-size: calc(20 / 320) * 100vw;
-    line-height: calc(28 / 320) * 100vw;
-  }
-
-  @media (max-width: 320px) {
+    margin-bottom: 10px;
+    margin-top: 10px;
     font-size: 20px;
     line-height: 28px;
   }
@@ -155,23 +116,10 @@
 
 .advantages__card p {
   margin: 0;
-
-  @include vp-1919 {
-    font-size: calc(16 / 1920) * 100vw;
-    line-height: calc(21 / 1920) * 100vw;
-  }
-
-  @include vp-1023 {
-    font-size: calc(16 / 770) * 100vw;
-    line-height: calc(21 / 770) * 100vw;
-  }
+  font-size: 16px;
+  line-height: 21px;
 
   @include vp-767 {
-    font-size: calc(14 / 320) * 100vw;
-    line-height: calc(19 / 320) * 100vw;
-  }
-
-  @media (max-width: 320px) {
     font-size: 14px;
     line-height: 19px;
   }

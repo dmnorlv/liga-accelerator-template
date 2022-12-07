@@ -19,41 +19,41 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="is-grid">
+<body class="is-grd">
   <div class="wrapper">
     <header class="header main-header container">
       <h1 class="visually-hidden">Smart Device умные технологии</h1>
-          <nav class="main-nav content-wrapper">
-            <a class="main-header__logo">
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/svg/logo.svg">
-                <img loading="lazy" src="img/svg/logo-mobile.svg" width="215" height="55" alt="Логотип компании.">
-              </picture>
+      <nav class="main-nav content-wrapper">
+        <a class="main-header__logo">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/svg/logo.svg">
+            <img loading="lazy" src="img/svg/logo-mobile.svg" width="215" height="55" alt="Логотип компании.">
+          </picture>
+        </a>
+        <ul class="main-nav__contact-list contact-list">
+          <li class="contact-list__item">
+            <a class="contact-list__link contact-list__link--mail" aria-label="написать нам на почту info@sd.ru"
+              href="mailto:info@sd.ru">
+              <svg class="contact-list__link-icon" width="21" height="20">
+                <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+              </svg>
+              <span>info@sd.ru</span>
             </a>
-            <ul class="main-nav__contact-list contact-list">
-              <li class="contact-list__item">
-                <a class="contact-list__link contact-list__link--mail" aria-label="написать нам на почту info@sd.ru"
-                  href="mailto:info@sd.ru">
-                  <svg class="contact-list__link-icon" width="21" height="20">
-                    <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
-                  </svg>
-                  <span>info@sd.ru</span>
-                </a>
-              </li>
-              <li class="contact-list__item">
-                <a class="contact-list__link contact-list__link--phone"
-                  aria-label="позвонить нам по номеру +74950005252" href="tel:+74950005252">
-                  <svg class="contact-list__link-icon" width="21" height="20">
-                    <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
-                  </svg>
-                  <span>+7 (495) 000 52 52</span>
-                </a>
-              </li>
-            </ul>
-            <div class="main-nav__buttons-wrapper">
-            <button class="main-nav__button" data-open-modal="feedback" type="button">Заказать звонок</button>
-            </div>
-          </nav>
+          </li>
+          <li class="contact-list__item">
+            <a class="contact-list__link contact-list__link--phone" aria-label="позвонить нам по номеру +74950005252"
+              href="tel:+74950005252">
+              <svg class="contact-list__link-icon" width="21" height="20">
+                <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+              </svg>
+              <span>+7 (495) 000 52 52</span>
+            </a>
+          </li>
+        </ul>
+        <div class="main-nav__buttons-wrapper">
+          <button class="main-nav__button" data-open-modal="feedback" type="button">Заказать звонок</button>
+        </div>
+      </nav>
     </header>
     <main>
       <section class="major-block container">
@@ -64,62 +64,58 @@
               консультацию</span><span class="major-block__link-text-mobile">Бесплатная консультация</span></a>
         </div>
       </section>
-
-      <!-- <section class="advantages container">
-          <div class="content-wrapper">
-            <h2 class="visually-hidden">Преимущества</h2>
-            <ul class="advantages__list">
-              <li class="advantages__card">
-                <svg class="advantages__card-icon" width="35" height="35">
-                  <use xlink:href="img/sprite_auto.svg#stopwatch"></use>
-                </svg>
-                <h3>
-                  Оперативные сроки
-                </h3>
-                <p>
-                  Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
-                  доставлять заказы плат и комплектующих в самые короткие сроки
-                </p>
-              </li>
-              <li class="advantages__card">
-                <svg class="advantages__card-icon" width="35" height="35">
-                  <use xlink:href="img/sprite_auto.svg#hired"></use>
-                </svg>
-                <h3>
-                  Крупные поставщики
-                </h3>
-                <p>
-                  Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
-                  Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.
-                </p>
-              </li>
-              <li class="advantages__card advantages__card--short">
-                <svg class="advantages__card-icon" width="35" height="35">
-                  <use xlink:href="img/sprite_auto.svg#detective"></use>
-                </svg>
-                <h3>
-                  Полная конфиденциальность
-                </h3>
-                <p>
-                  По желанию клиента мы обеспечиваем полную конфиденциальность.
-                </p>
-              </li>
-              <li class="advantages__card advantages__card--short">
-                <svg class="advantages__card-icon" width="35" height="35">
-                  <use xlink:href="img/sprite_auto.svg#tag"></use>
-                </svg>
-                <h3>
-                  Персонализация стоимости
-                </h3>
-                <p>
-                  Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
-                  устраивает.
-                </p>
-              </li>
-            </ul>
-          </div>
+      <section class="advantages container">
+        <div class="content-wrapper">
+          <h2 class="visually-hidden">Преимущества</h2>
+          <ul class="advantages__list">
+            <li class="advantages__card">
+              <svg class="advantages__card-icon" width="35" height="35">
+                <use xlink:href="img/sprite_auto.svg#stopwatch"></use>
+              </svg>
+              <h3>
+                Оперативные сроки
+              </h3>
+              <p>
+                Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки.
+              </p>
+            </li>
+            <li class="advantages__card">
+              <svg class="advantages__card-icon" width="35" height="35">
+                <use xlink:href="img/sprite_auto.svg#hired"></use>
+              </svg>
+              <h3>
+                Крупные поставщики
+              </h3>
+              <p>
+                Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.
+              </p>
+            </li>
+            <li class="advantages__card advantages__card--short">
+              <svg class="advantages__card-icon" width="35" height="35">
+                <use xlink:href="img/sprite_auto.svg#detective"></use>
+              </svg>
+              <h3>
+                Полная конфиденциальность
+              </h3>
+              <p>
+                По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.
+              </p>
+            </li>
+            <li class="advantages__card advantages__card--short">
+              <svg class="advantages__card-icon" width="35" height="35">
+                <use xlink:href="img/sprite_auto.svg#tag"></use>
+              </svg>
+              <h3>
+                Персонализация стоимости
+              </h3>
+              <p>
+                Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая Вас устраивает.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
-
+      <!--
       <section class="about container">
           <div class="about__wrapper content-wrapper">
             <picture>
