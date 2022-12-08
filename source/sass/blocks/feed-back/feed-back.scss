@@ -10,7 +10,7 @@
   }
 
   @include vp-767 {
-    padding-top: 50px;
+    padding-top: 47px;
     padding-bottom: 90px;
   }
 }
@@ -69,12 +69,14 @@
   margin-bottom: 10px;
 
   @include vp-1023 {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    margin-left: 0;
   }
 
   @include vp-767 {
     font-size: 30px;
     line-height: 42px;
+    margin-bottom: 7px;
   }
 }
 
@@ -90,7 +92,7 @@
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
-    margin-bottom: 30px;
+    margin-bottom: 34px;
   }
 }
 
@@ -125,11 +127,12 @@
   min-height: 155px;
 
   @include vp-1023 {
-    margin-bottom: 0;
+    margin-bottom: 15px;
     padding-top: 32px;
   }
 
   @include vp-767 {
+    padding-top: 24px;
     grid-column: 1/2;
     margin-bottom: 10px;
     min-height: 180px;
@@ -146,9 +149,16 @@
   font-size: 16px;
   line-height: 15px;
 
+  @include vp-1023 {
+    width: percentage(calc(265 / 320));
+    max-width: none;
+    margin-bottom: 5px;
+  }
+
   @include vp-767 {
     width: 100%;
-    margin-bottom: 5px;
+    padding-top: 17px;
+    padding-bottom: 13px;
   }
 }
 
@@ -177,7 +187,11 @@
   }
 
   @include vp-767 {
+    max-width: none;
+    min-width: 260px;
     margin-top: 0;
+    margin-left: 5px;
+    align-items: center;
   }
 }
 
