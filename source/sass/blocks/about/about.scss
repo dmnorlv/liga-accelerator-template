@@ -1,25 +1,15 @@
 .about {
   padding-top: 60px;
-  padding-bottom: 100px;
-
-  @include vp-1919 {
-    padding-top: percentage(calc(60 / 1920));
-    padding-bottom: percentage(calc(100 / 1920));
-  }
+  padding-bottom: 101px;
 
   @include vp-1023 {
-    padding-top: percentage(calc(35 / 770));
-    padding-bottom: percentage(calc(80 / 770));
+    padding-top: 35px;
+    padding-bottom: 79px;
   }
 
   @include vp-767 {
-    padding-top: percentage(calc(25 / 320));
-    padding-bottom: percentage(calc(73 / 320));
-  }
-
-  @media (max-width: 320px) {
     padding-top: 20px;
-    padding-bottom: 73px;
+    padding-bottom: 80px;
   }
 }
 
@@ -40,6 +30,10 @@
   width: 100%;
   height: auto;
 
+  @include vp-1023 {
+    margin-top: 5px;
+  }
+
   @include vp-767 {
     display: none;
   }
@@ -56,29 +50,16 @@
   font-size: 36px;
   line-height: 51px;
   margin: 0;
-  margin-bottom: 15px;
-
-  @include vp-1919 {
-    font-size: calc(36 / 1919) * 100vw;
-    line-height: calc(51 / 1919) * 100vw;
-    margin-bottom: percentage(calc(15 / 970));
-  }
+  margin-bottom: 12px;
 
   @include vp-1023 {
-    font-size: calc(36 / 770) * 100vw;
-    line-height: calc(51 / 770) * 100vw;
-    margin-bottom: percentage(calc(10 / 493.5));
+    margin-bottom: 10px;
   }
 
   @include vp-767 {
-    font-size: calc(28 / 320) * 100vw;
-    line-height: calc(39 / 320) * 100vw;
-    margin-bottom: percentage(calc(15 / 270));
-  }
-
-  @media (max-width: 320px) {
     font-size: 28px;
     line-height: 39px;
+    margin-bottom: 15px;
   }
 }
 
@@ -86,27 +67,14 @@
   margin: 0;
   margin-bottom: 22px;
 
-  @include vp-1919 {
-    font-size: calc(16 / 1920) * 100vw;
-    line-height: calc(22 / 1920) * 100vw;
-    margin-bottom: percentage(calc(22 / 970));
-  }
-
   @include vp-1023 {
-    font-size: calc(16 / 770) * 100vw;
-    line-height: calc(22 / 770) * 100vw;
-    margin-bottom: percentage(calc(20 / 493.5));
+    margin-bottom: 20px;
   }
 
   @include vp-767 {
-    font-size: calc(14 / 320) * 100vw;
-    line-height: calc(19 / 320) * 100vw;
-    margin-bottom: percentage(calc(18 / 270));
-  }
-
-  @media (max-width: 320px) {
     font-size: 14px;
     line-height: 19px;
+    margin-bottom: 16px;
   }
 }
 
@@ -128,30 +96,12 @@
   user-select: none;
   background-color: inherit;
 
-  @include vp-1919 {
-    font-size: calc(14 / 1919) * 100vw;
-    line-height: calc(16 / 1919) * 100vw;
-    padding: percentage(calc(13.5 / 970)) percentage(calc(50 / 970));
-    margin-top: percentage(calc(40 / 970));
-  }
-
   @include vp-1023 {
-    font-size: calc(14 / 770) * 100vw;
-    line-height: calc(16 / 770) * 100vw;
-    padding: percentage(calc(13.5 / 493.5)) percentage(calc(50 / 493.5));
     margin-top: 0;
   }
 
   @include vp-767 {
-    font-size: calc(14 / 320) * 100vw;
-    line-height: calc(16 / 320) * 100vw;
-    padding: percentage(calc(8.5 / 270)) percentage(calc(40 / 270));
-    margin-top: 0;
-  }
-
-  @media (max-width: 320px) {
-    font-size: 14px;
-    line-height: 16px;
+    padding: 8.5px 40px;
   }
 }
 

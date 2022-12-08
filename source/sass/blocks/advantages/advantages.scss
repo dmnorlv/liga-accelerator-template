@@ -27,16 +27,11 @@
 
   @include vp-1023 {
     grid-template-columns: percentage(calc(320 / 670)) percentage(calc(320 / 670));
-    gap: calc(30 / 770) * 100vw;
+    gap: 30px;
   }
 
   @include vp-767 {
     grid-template-columns: auto;
-    gap: calc(30 / 320) * 100vw;
-  }
-
-  @media (max-width: 320px) {
-    gap: 30px;
   }
 }
 
