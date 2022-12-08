@@ -17,6 +17,14 @@
   padding-top: 25px;
 }
 
+.form div {
+  min-width: 194px;
+  flex: 1 1 auto;
+  order: 2;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
 .form input[type="text"]::placeholder,
 .form input[type="tel"]::placeholder,
 .form textarea::placeholder {
@@ -43,23 +51,21 @@
 .form label {
   position: relative;
   color: rgba(255, 255, 255, 0.8);
-  padding-left: 25px;
   font-size: 14px;
   line-height: 15px;
 }
 
 .form input[type="checkbox"] + span {
-  position: absolute;
-  content: "";
-  width: 15px;
+  display: flex;
+  flex: 0 0 auto;
+  width: 14.9px;
   height: 15px;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 21px;
+  margin-left: 10px;
+  align-self: flex-start;
   border-radius: 2px;
   border: 1px solid $color-default-white;
   background-color: $color-deep-sky-blue;
-  display: flex;
   overflow: hidden;
 }
 

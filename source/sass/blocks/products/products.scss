@@ -23,9 +23,6 @@
   line-height: 51px;
   margin-bottom: 55px;
 
-  @include vp-1919 {
-  }
-
   @include vp-1023 {
     margin-bottom: 37px;
   }
