@@ -1,22 +1,18 @@
 .main-footer {
-  padding: 50px 350px 55px;
+  padding-top: 50px;
+  padding-bottom: 55px;
   background-color: $color-black-pearl-2;
   min-width: 320px;
 
-  @include vp-1919 {
-    padding: percentage(calc(50 / 1920)) percentage(calc(350 / 1920)) percentage(calc(55 / 1920));
-  }
 
   @include vp-1023 {
-    padding: percentage(calc(50 / 770)) percentage(calc(50 / 770)) percentage(calc(70 / 770));
+    padding-top: 50px;
+    padding-bottom: 70px;
   }
 
   @include vp-767 {
-    padding: percentage(calc(35 / 320)) percentage(calc(25 / 320));
-  }
-
-  @media (max-width: 320px) {
-    padding: 35px 25px;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 }
 
@@ -30,23 +26,7 @@
   margin: 0;
   letter-spacing: 0.05em;
 
-  @include vp-1919 {
-    font-size: calc(15 / 1920) * 100vw;
-    line-height: calc(20 / 1920) * 100vw;
-  }
-
   @include vp-1023 {
-    font-size: calc(15 / 770) * 100vw;
-    line-height: calc(16 / 770) * 100vw;
-  }
-
-  @include vp-767 {
-    font-size: calc(15 / 320) * 100vw;
-    line-height: calc(16 / 320) * 100vw;
-  }
-
-  @media (max-width: 320px) {
-    font-size: 15px;
     line-height: 16px;
   }
 }
@@ -67,7 +47,7 @@
 .main-footer__social-wrapper {
   display: flex;
   flex-direction: column;
-  width: percentage(calc(215 / 1220));
+  width: 215px;
 
   @include vp-1023 {
     flex-direction: row;
@@ -87,19 +67,7 @@
   vertical-align: bottom;
   font-size: 16px;
 
-  @include vp-1919 {
-    font-size: calc(16 / 1920) * 100vw;
-  }
-
-  @include vp-1023 {
-    font-size: calc(16 / 770) * 100vw;
-  }
-
   @include vp-767 {
-    font-size: calc(14 / 320) * 100vw;
-  }
-
-  @media (max-width: 320px) {
     font-size: 14px;
   }
 }
@@ -120,7 +88,7 @@
   width: percentage(calc(845 / 1220));
   grid-template-columns: percentage(calc(470 / 845)) percentage(calc(30 / 845)) percentage(calc(345 / 845));
   padding-top: 5px;
-  margin-left: percentage(calc(160 / 1220));
+  margin-left: auto;
 
   @include vp-1023 {
     margin: 0;
@@ -145,10 +113,6 @@
   grid-column-end: 2;
   align-self: flex-start;
 
-  @include vp-1919 {
-    column-gap: calc(30 / 1920) * 100vw;
-  }
-
   @include vp-1023 {
     align-self: stretch;
     display: flex;
@@ -157,7 +121,6 @@
 
   @include vp-767 {
     position: relative;
-    padding: percentage(calc(20 / 270)) 0;
   }
 }
 
@@ -167,21 +130,14 @@
 
   @include vp-767 {
     position: relative;
-    padding: percentage(calc(20 / 270)) 0;
   }
 }
 
 .main-footer__logo {
   display: block;
-  width: 100%;
-
-  @include vp-1023 {
-    width: percentage(calc(215 / 670));
-  }
 
   @include vp-767 {
-    width: percentage(calc(215 / 270));
-    margin-bottom: percentage(calc(15 / 270));
+    margin-bottom: 15px;
   }
 }
 
@@ -194,7 +150,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-top: percentage(calc(20 / 220));
+  margin-top: 20px;
 
   @include vp-1023 {
     margin-top: 0;
@@ -206,35 +162,23 @@
   grid-column-end: 2;
 
   @include vp-1023 {
-    margin-bottom: percentage(calc(10 / 220));
-    margin-top: percentage(calc(20 / 220));
+    margin-bottom: 10px;
+    margin-top: 25px;
   }
 
   @include vp-767 {
-    margin-top: 0;
-    margin-bottom: percentage(calc(10 / 270));
+    margin-bottom: 0;
+    margin-top: -7px;
   }
 }
 
 .main-footer__sections-item {
-  padding-bottom: percentage(calc(10 / 220));
+  padding-bottom: 10px;
   line-height: 20px;
 
-  @include vp-1919 {
-    line-height: calc(20 / 1920) * 100vw;
-  }
-
-  @include vp-1023 {
-    line-height: calc(20 / 770) * 100vw;
-  }
-
   @include vp-767 {
-    line-height: calc(25 / 320) * 100vw;
-    padding-bottom: percentage(calc(10 / 270));
-  }
-
-  @media (max-width: 320px) {
     line-height: 25px;
+    padding-bottom: 5px;
   }
 }
 
@@ -242,7 +186,7 @@
   padding-bottom: 0;
 
   @include vp-767 {
-    padding-bottom: 0;
+    padding-bottom: 15px;
   }
 }
 
@@ -252,22 +196,37 @@
   border: none;
   padding: 0;
   background-color: inherit;
-  background-image: url("../img/svg/plus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-width: 15px;
-  min-height: 15px;
-  width: percentage(calc(15 / 270));
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: percentage(calc(15 / 16));
+  width: 15px;
+  height: 15px;
+  align-self: center;
+  position: relative;
 
   @include vp-767 {
+    margin-top: -5px;
+    margin-right: 2px;
     display: block;
   }
+}
+
+.main-footer__button-sections::after,
+.main-footer__button-contacts::after,
+.main-footer__button-sections::before,
+.main-footer__button-contacts::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $color-silver;
+}
+
+.main-footer__button-sections::before,
+.main-footer__button-contacts::before {
+  top: 7.5px;
+  left: 50%;
+  transform: translate(-50%) rotate(90deg);
 }
 
 .main-footer__button-no-js {
@@ -276,9 +235,9 @@
   }
 }
 
-.main-footer__button-js {
+.main-footer__button-js::before {
   @include vp-767 {
-    background-image: url("../img/svg/minus.svg");
+    display: none;
   }
 }
 
@@ -310,17 +269,61 @@
 }
 
 .main-footer__heading-container {
+  background-color: inherit;
+  border: none;
+  cursor: default;
+  display: block;
+  padding: 0;
+  text-align: left;
+
   @include vp-767 {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-bottom: percentage(calc(15 / 270));
+    width: 100%;
   }
 }
 
-.main-footer__heading-container-js {
+.main-footer__heading-container:disabled {
   @include vp-767 {
-    margin-bottom: 0;
+    cursor: default;
+  }
+}
+
+.main-footer__heading-container:hover h3,
+.main-footer__heading-container:focus h3 {
+  @include vp-767 {
+    color: $color-deep-sky-blue;
+  }
+}
+
+.main-footer__heading-container:disabled:hover h3 {
+  color: $color-default-white;
+}
+
+.main-footer__heading-container:hover .main-footer__button-sections::after,
+.main-footer__heading-container:hover .main-footer__button-sections::before,
+.main-footer__heading-container:hover .main-footer__button-contacts::after,
+.main-footer__heading-container:hover .main-footer__button-contacts::before,
+.main-footer__heading-container:focus .main-footer__button-sections::after,
+.main-footer__heading-container:focus .main-footer__button-sections::before,
+.main-footer__heading-container:focus .main-footer__button-contacts::after,
+.main-footer__heading-container:focus .main-footer__button-contacts::before {
+  @include vp-767 {
+    background-color: $color-deep-sky-blue;
+  }
+}
+
+.main-footer__heading-container:focus {
+  outline: none;
+}
+
+.main-footer__heading-container:active {
+  @include vp-767 {
+    opacity: 0.6;
   }
 }
 

@@ -4,14 +4,15 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  margin-top: percentage(calc(20 / 345));
+  margin-top: 20px;
 
   @include vp-1023 {
-    margin-top: percentage(calc(20 / 320));
+    margin-top: 26px;
   }
 
   @include vp-767 {
-    margin-top: 0;
+    margin-top: -5px;
+    margin-bottom: 13px;
   }
 }
 
@@ -20,19 +21,7 @@
   font-style: normal;
   font-size: 16px;
 
-  @include vp-1919 {
-    font-size: calc(16 / 1920) * 100vw;
-  }
-
-  @include vp-1023 {
-    font-size: calc(16 / 770) * 100vw;
-  }
-
   @include vp-767 {
-    font-size: calc(14 / 320) * 100vw;
-  }
-
-  @media (max-width: 320px) {
     font-size: 14px;
   }
 }
@@ -40,42 +29,22 @@
 .contacts-list__item {
   line-height: 20px;
 
-  @include vp-1919 {
-    line-height: calc(20 / 1920) * 100vw;
-  }
-
-  @include vp-1023 {
-    line-height: calc(20 / 770) * 100vw;
-  }
-
   @include vp-767 {
-    line-height: calc(25 / 320) * 100vw;
-  }
-
-  @media (max-width: 320px) {
     line-height: 25px;
   }
 }
 
 .contacts-list__item:not(:last-child) {
-  padding-bottom: percentage(calc(10 / 345));
-
-  @include vp-1023 {
-    padding-bottom: percentage(calc(10 / 320));
-  }
+  margin-bottom: 10px;
 
   @include vp-767 {
-    padding-bottom: percentage(calc(10 / 270));
+    margin-bottom: 5px;
   }
 }
 
 .contacts-list__item--address {
   @include vp-767 {
-    line-height: calc(20 / 320) * 100vw;
-    margin-bottom: percentage(calc(5 / 270));
-  }
-
-  @media (max-width: 320px) {
     line-height: 20px;
+    margin-bottom: 12px;
   }
 }

@@ -72,6 +72,10 @@
   background-color: $color-deep-sky-blue;
   overflow: hidden;
 
+  @include vp-1919 {
+    margin-left: 0;
+  }
+
   @include vp-1023 {
     margin-top: 6px;
     margin-left: 0;

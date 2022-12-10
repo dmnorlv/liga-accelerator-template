@@ -18,8 +18,7 @@ const initAccordeon = () => {
     });
 
     headingContainers.forEach((element, i) => {
-      element.classList.add('main-footer__heading-container-js');
-      footerButtons[i] = element.querySelector('button');
+      footerButtons[i] = element.querySelector('div');
 
       if (footerButtons[i]) {
         footerButtons[i].classList.remove('main-footer__button-no-js');
@@ -27,27 +26,27 @@ const initAccordeon = () => {
     });
 
     if (footerButtons) {
-      footerButtons.forEach((button, i) => {
+      headingContainers.forEach((button, i) => {
         button.addEventListener('click', (evt) => {
-          button.classList.toggle('main-footer__button-js');
-          const lists = footerListsArrays[i];
-          lists.forEach((list) => {
-            list.classList.toggle('main-footer__list-js');
-          });
-          headingContainers[i].classList.toggle('main-footer__heading-container-js');
+          evt.preventDefault();
+          if (window.innerWidth < 768) {
+            footerButtons[i].classList.toggle('main-footer__button-js');
+            const lists = footerListsArrays[i];
+            lists.forEach((list) => {
+              list.classList.toggle('main-footer__list-js');
+            });
 
-          if (evt.target.classList.contains('main-footer__button-sections')) {
-            footerButtons[1].classList.remove('main-footer__button-js');
-            contactsLists.forEach((list) => {
-              list.classList.add('main-footer__list-js');
-            });
-            headingContainers[1].classList.add('main-footer__heading-container-js');
-          } else {
-            footerButtons[0].classList.remove('main-footer__button-js');
-            sectionsLists.forEach((list) => {
-              list.classList.add('main-footer__list-js');
-            });
-            headingContainers[0].classList.add('main-footer__heading-container-js');
+            if (evt.target.closest('.main-footer__button-section')) {
+              footerButtons[1].classList.remove('main-footer__button-js');
+              contactsLists.forEach((list) => {
+                list.classList.add('main-footer__list-js');
+              });
+            } else {
+              footerButtons[0].classList.remove('main-footer__button-js');
+              sectionsLists.forEach((list) => {
+                list.classList.add('main-footer__list-js');
+              });
+            }
           }
         });
       });
@@ -55,5 +54,5 @@ const initAccordeon = () => {
   }
 };
 
-export {initAccordeon};
+export {initAccordeon, };
 

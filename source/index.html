@@ -10,10 +10,10 @@
   <link rel="icon" href="img/favicons/favicon-svg.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="preload" href="fonts/pt-mono-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-condensed-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-condensed-700.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" as="style" href="css/style.min.css">
+  <link rel="prefetch" href="fonts/pt-mono-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/roboto-condensed-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/roboto-condensed-700.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="prefetch" as="style" href="css/style.min.css">
   <title>Smart Device</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -221,8 +221,7 @@
           </div>
       </section>
     </main>
-<!--
-    <footer class="footer main-footer">
+    <footer class="footer main-footer container">
       <div class="main-footer__wrapper content-wrapper">
         <div class="main-footer__social-wrapper">
           <a class="main-footer__logo">
@@ -254,11 +253,10 @@
         </div>
         <div class="main-footer__group">
           <div class="main-footer__sections-wrapper" role="navigation" aria-label="Дополнительное меню">
-            <div class="main-footer__heading-container">
+            <button class="main-footer__heading-container main-footer__button-section" tabindex="-1" type="button">
               <h3>Разделы сайта</h3>
-              <button class="main-footer__button-sections main-footer__button-no-js" type="button"><span
-                  class="visually-hidden">Открыть или закрыть разделы сайта.</span></button>
-            </div>
+              <div class="main-footer__button-sections main-footer__button-no-js"></div>
+            </button>
             <ul class="main-footer__sections main-footer__sections--primary">
               <li class="main-footer__sections-item">
                 <a class="main-footer__link" href="#">О компании</a>
@@ -287,12 +285,10 @@
             </ul>
           </div>
           <div class="main-footer__contacts-wrapper" role="contentinfo">
-            <div class="main-footer__heading-container">
+            <button class="main-footer__heading-container" type="button" tabindex="-1">
               <h3>Наш офис</h3>
-              <button class="main-footer__button-contacts main-footer__button-no-js" type="button"><span
-                  class="visually-hidden">Открыть или
-                  закрыть контакты компании.</span></button>
-            </div>
+              <div class="main-footer__button-contacts main-footer__button-no-js"></div>
+            </button>
             <ul class="main-footer__contacts contacts-list">
               <li class="contacts-list__item contacts-list__item--address">
                 <address>г. Мытищи, Олимпийский проспект, д.10</address>
@@ -342,7 +338,7 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
   <script type="module" src="js/main.min.js"></script>
 </body>
 

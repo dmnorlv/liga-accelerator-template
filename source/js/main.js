@@ -22,7 +22,21 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
     initAbout();
-    initAccordeon();
+    console.log(window.innerWidth);
+    if (window.innerWidth < 768) {
+      if (document.querySelectorAll('.main-footer__heading-container')) {
+        const buttons = document.querySelectorAll('.main-footer__heading-container');
+        buttons.forEach((element) => {
+          element.setAttribute('tabindex', '0');
+        });
+      }
+      initAccordeon();
+    } else {
+      const buttons = document.querySelectorAll('.main-footer__heading-container');
+      buttons.forEach((element) => {
+        element.setAttribute('disabled', 'disabled');
+      });
+    }
     initMask();
   });
 });
