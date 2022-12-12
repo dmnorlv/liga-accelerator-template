@@ -2120,6 +2120,10 @@ button,
     margin-left: 0;
   }
 
+  .modal {
+    display: none;
+  }
+
   .main-header {
     padding-top: 20px;
   }
@@ -2566,20 +2570,20 @@ button,
   .main-footer__contacts-wrapper::before {
     position: absolute;
     content: "";
-    width: 118.52%;
+    width: 100vw;
     height: 1px;
     background-color: rgba(248, 253, 255, 0.7);
   }
 
   .main-footer__sections-wrapper::after {
     top: 0;
-    left: -9.2592592593%;
+    left: -25px;
   }
 
   .main-footer__sections-wrapper::before,
   .main-footer__contacts-wrapper::before {
     bottom: 0;
-    left: -9.2592592593%;
+    left: -25px;
   }
 
   .main-footer__heading-container {
