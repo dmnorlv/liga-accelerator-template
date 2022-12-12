@@ -60,7 +60,14 @@
     position: relative;
 
     width: 500px;
+    // min-height: 610px;
     padding: 40px;
+    padding-bottom: 45px;
+    // padding-top: 35px;
+
+    margin-top: 60px;
+    margin-right: 12px;
+    border-radius: 3px;
 
     background-color: $color-deep-sky-blue;
 
@@ -72,9 +79,11 @@
 
   &__close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 17px;
+    right: 17px;
     z-index: 1;
+
+    display: flex;
 
     width: 40px;
     height: 40px;
@@ -89,6 +98,8 @@
 
       width: 20px;
       height: 20px;
+
+      margin: auto;
     }
   }
 
@@ -130,6 +141,11 @@
   background-color: $color-black-pearl;
 }
 
+.modal__close-btn:focus {
+  outline: 2px solid $color-default-white;
+  outline-offset: 0;
+}
+
 .modal__close-btn:active {
   opacity: 0.6;
 }
@@ -139,10 +155,10 @@
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 30px;
-  line-height: 42px;
+  line-height: 36px;
   color: $color-default-white;
 
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 }
 
 .modal__content p {
@@ -150,7 +166,7 @@
   color: $color-default-white;
 
   width: 400px;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .modal__form form {
@@ -160,16 +176,33 @@
 
 .modal__form textarea {
   margin-bottom: 5px;
+  min-height: 155px;
 }
 
 .modal__form label {
   order: 2;
-  justify-self: center;
-  width: 395px;
+  display: flex;
+  padding-left: 5px;
+}
+
+.modal__accept-text {
+  margin-left: 12px;
 }
 
 .modal__form input[type="checkbox"] + span {
-  top: 6px;
+  order: -1;
+  margin: 0;
+}
+
+.modal__form input[type="checkbox"]:focus + span {
+  outline: 2px solid $color-default-white;
+  outline-offset: 2px;
+
+  border-color: $color-black-pearl;
+}
+
+.modal__form input[type="checkbox"]:focus:hover + span {
+  outline: none;
 }
 
 .modal__form input[type="checkbox"]:checked + span > svg {
@@ -178,12 +211,19 @@
 
 .modal__form button {
   order: 1;
+  padding-top: 17px;
+  padding-bottom: 13px;
 }
 
 .modal__form button:hover,
 .modal__form button:focus {
   background-color: $color-default-white;
   color: $color-black-pearl;
+}
+
+.modal__form button:focus {
+  outline: 2px solid rgba(4, 20, 39, 0.8);
+  outline-offset: 0;
 }
 
 .modal__form button:active {
@@ -210,10 +250,6 @@
 .modal__form svg {
   fill: none;
   stroke: $color-default-white;
-}
-
-.modal__form input[type="checkbox"]:focus + span {
-  border-color: $color-black-pearl;
 }
 
 .modal__form label:hover svg,

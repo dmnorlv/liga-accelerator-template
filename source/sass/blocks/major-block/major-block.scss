@@ -134,6 +134,11 @@
   cursor: pointer;
 }
 
+.major-block__link:focus {
+  outline: 2px solid $color-default-white;
+  outline-offset: 0;
+}
+
 .major-block__link:active {
   opacity: 0.8;
 }

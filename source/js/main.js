@@ -22,7 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
     initAbout();
-    console.log(window.innerWidth);
     if (window.innerWidth < 768) {
       if (document.querySelectorAll('.main-footer__heading-container')) {
         const buttons = document.querySelectorAll('.main-footer__heading-container');

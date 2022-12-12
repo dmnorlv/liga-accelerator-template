@@ -115,6 +115,11 @@
   border-color: $color-black-pearl;
 }
 
+.about__button:focus {
+  outline: 2px solid $color-deep-sky-blue;
+  outline-offset: 2px;
+}
+
 .about__button:active {
   color: rgba(4, 20, 39, 0.6);
   border-color: rgba(4, 20, 39, 0.6);

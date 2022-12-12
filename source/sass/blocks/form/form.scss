@@ -17,16 +17,14 @@
   padding-top: 25px;
 }
 
-.form div {
-  min-width: 194px;
-  flex: 1 1 auto;
-  order: 2;
-  margin-top: 15px;
-  margin-left: 10px;
+.form input:hover,
+.form textarea:hover {
+  background-color: rgba(4, 20, 39, 0.65);
+}
 
-  @include vp-1023 {
-    margin-top: 0;
-  }
+.form input:focus,
+.form textarea:focus {
+  background-color: rgba(4, 20, 39, 0.45);
 }
 
 .form input[type="text"]::placeholder,
@@ -64,17 +62,12 @@
   flex: 0 0 auto;
   width: 14.9px;
   height: 15px;
-  margin-top: 21px;
-  margin-left: 10px;
+  margin: auto;
   align-self: flex-start;
   border-radius: 2px;
   border: 1px solid $color-default-white;
   background-color: $color-deep-sky-blue;
   overflow: hidden;
-
-  @include vp-1919 {
-    margin-left: 0;
-  }
 
   @include vp-1023 {
     margin-top: 6px;
@@ -87,9 +80,17 @@
   }
 }
 
+.form input[type="checkbox"]:focus + span {
+  outline: 2px solid $color-default-white;
+  outline-offset: 2px;
+}
+
+.form input[type="checkbox"]:focus:hover + span {
+  outline: none;
+}
+
 .form svg {
-  margin-top: 4px;
-  margin-left: 2px;
+  margin: auto;
   display: none;
 }
 
